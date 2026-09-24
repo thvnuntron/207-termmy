@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSI207 — คู่มือเตรียมสอบกลางภาค ฉบับเจาะลึกจากศูนย์</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2563eb;--navy:#1e3a8a;--sky:#eff6ff;--ink:#1f2937;--muted:#64748b;--amber:#f59e0b;--red:#ef4444;--green:#16a34a;--teal:#0891b2;--line:#e2e8f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#eef2f7;color:var(--ink);font-family:'Sarabun',sans-serif;font-size:15.5px;line-height:1.75;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.wrap{max-width:1150px;margin:0 auto;padding:18px}
+h1,h2,h3,h4{font-family:'Prompt','Sarabun',sans-serif;line-height:1.4}
+.hero{background:linear-gradient(135deg,#0f2a5f 0%,#1e3a8a 45%,#2563eb 100%);color:#fff;border-radius:20px;padding:38px 40px;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(30,58,138,.25)}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero .kicker{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#bfdbfe;font-weight:600}
+.hero h1{font-size:2rem;margin:8px 0 6px;font-weight:700;position:relative;z-index:2}
+.hero p.sub{margin:0 0 16px;color:#dbeafe;font-size:1.02rem;position:relative;z-index:2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:2}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 14px;font-size:.83rem}
+.layout{display:grid;grid-template-columns:255px 1fr;gap:20px;margin-top:20px;align-items:start}
+nav.toc{position:sticky;top:14px;background:#fff;border-radius:16px;padding:18px;box-shadow:0 1px 4px rgba(2,6,23,.08);max-height:calc(100vh - 30px);overflow:auto}
+nav.toc h4{margin:2px 0 8px;font-size:.95rem}
+nav.toc .grp{font-family:'Prompt';font-weight:700;color:#1e3a8a;font-size:.86rem;margin:12px 0 4px;border-top:1px solid var(--line);padding-top:10px}
+nav.toc a{display:block;color:#1e40af;text-decoration:none;font-size:.82rem;padding:2.5px 0 2.5px 8px;border-left:2px solid transparent}
+nav.toc a:hover{border-left-color:var(--blue);background:var(--sky);border-radius:0 6px 6px 0}
+main{min-width:0}
+.card{background:#fff;border-radius:16px;padding:28px 32px;margin-bottom:22px;box-shadow:0 1px 4px rgba(2,6,23,.08)}
+.chapnum{display:inline-flex;min-width:40px;height:40px;background:var(--blue);color:#fff;border-radius:11px;align-items:center;justify-content:center;font-weight:700;margin-right:10px;padding:0 8px}
+h2.chap{font-size:1.5rem;color:#0f172a;display:flex;align-items:center;margin:0 0 4px}
+.chapsub{color:var(--muted);font-size:.95rem;margin:0 0 18px;padding-left:52px}
+h3.sec{color:#1e3a8a;font-size:1.16rem;margin:30px 0 10px;padding:0 0 6px 12px;border-left:5px solid var(--blue);border-bottom:2px solid var(--line)}
+h4.mini{color:#334155;font-size:1.02rem;margin:18px 0 6px}
+.def{background:var(--sky);border-left:5px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0}
+.key{background:#f0fdf4;border-left:5px solid var(--green);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0}
+.ex{background:#ecfeff;border-left:5px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0}
+.ex .t{font-weight:700;color:#0e7490;display:block;margin-bottom:6px}
+.tip{background:#fffbeb;border:1.5px solid var(--amber);border-radius:12px;padding:12px 16px;margin:16px 0}
+.tip .t{font-weight:700;color:#92400e;display:block;margin-bottom:4px}
+.warn{background:#fef2f2;border:1.5px solid var(--red);border-radius:12px;padding:12px 16px;margin:16px 0}
+.warn .t{font-weight:700;color:#b91c1c;display:block;margin-bottom:4px}
+.formula{background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:12px;padding:10px 12px;text-align:center;margin:14px 0}
+.formula .note{display:block;font-size:.85rem;color:var(--muted);margin-top:4px}
+ul.tight{margin:6px 0;padding-left:22px}ul.tight li{margin:4px 0}
+ol.tight{margin:6px 0;padding-left:24px}ol.tight li{margin:5px 0}
+table.tbl{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem}
+table.tbl th{background:var(--sky);color:var(--navy);border:1px solid #dbe3ef;padding:7px 10px;text-align:left;font-family:'Prompt'}
+table.tbl td{border:1px solid #e5eaf2;padding:7px 10px;vertical-align:top}
+table.tbl tr:nth-child(even) td{background:#fafcff}
+.fig{margin:16px 0;padding:12px 10px;background:#fbfdff;border:1px solid var(--line);border-radius:14px;text-align:center}
+.fig svg{max-width:100%;height:auto}
+.fig figcaption{font-size:.88rem;color:#475569;margin-top:8px;line-height:1.6}
+pre.code{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:14px 18px;overflow-x:auto;font-size:.86rem;line-height:1.7;font-family:'Sarabun',monospace}
+pre.code .c{color:#94a3b8}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mcard{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfdff}
+.mcard b{color:var(--navy)}
+.small{font-size:.85rem;color:var(--muted)}
+footer.end{text-align:center;color:var(--muted);padding:10px 0 30px;font-size:.9rem}
+.katex{font-size:1.04em}.katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
+@media (max-width:900px){.layout{grid-template-columns:1fr}nav.toc{position:static;max-height:none}}
+@page{size:A4;margin:12mm}
+@media print{body{background:#fff;font-size:13.5px}.wrap{max-width:none;padding:0}.layout{display:block;margin:0}nav.toc{display:none}.card{box-shadow:none;border:none;border-radius:0;padding:10px 0;margin:0}.hero{border-radius:0;margin-bottom:14px}h2.chap,.chapter{break-before:page}.fig,.tip,.warn,.def,.key,.ex,.formula,table.tbl,pre.code,.mcard{break-inside:avoid}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10Z" fill="#2563eb"/></marker>
+<marker id="aR" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10Z" fill="#dc2626"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10Z" fill="#16a34a"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10Z" fill="#f59e0b"/></marker>
+</defs></svg>
+
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">DSI207 · Optimization · Midterm Survival Kit</div>
+  <h1>หนังสือคู่มือเตรียมสอบกลางภาค ฉบับเจาะลึกจากศูนย์</h1>
+  <p class="sub">บทที่ 1–4 เฉพาะเนื้อหาที่ออกสอบ · แปลศัพท์อังกฤษทุกคำ · ตัวอย่างจับมือทำทุกหัวข้อ</p>
+  <div class="chips">
+    <span class="chip">📘 4 บทตามแนวข้อสอบ</span><span class="chip">🔤 แปลศัพท์ทุกคำ</span>
+    <span class="chip">🧮 ชำแหละสัญลักษณ์ทุกตัว</span><span class="chip">✍️ ตัวอย่างคำนวณทีละบรรทัด</span><span class="chip">🖨️ พิมพ์เป็น PDF 20+ หน้า</span>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="toc">
+  <h4>📑 สารบัญ</h4>
+  <a href="#howto">▸ วิธีใช้เล่มนี้ + พิมพ์ PDF</a>
+  <div class="grp">บทที่ 1 · ภูมิทัศน์ Optimization</div>
+  <a href="#s11">1.1 Optimization คืออะไร</a>
+  <a href="#s12">1.2 องค์ประกอบ 3 อย่าง</a>
+  <a href="#s13">1.3 ปริภูมิค้นหา</a>
+  <a href="#s14">1.4 พื้นผิวตอบสนอง</a>
+  <a href="#s15">1.5 คำสาปแห่งมิติ</a>
+  <a href="#s16">1.6 Function Evaluations</a>
+  <a href="#s17">1.7 Global vs Local</a>
+  <a href="#s18">1.8 ลู่เข้าก่อนกำหนด</a>
+  <a href="#s19">1.9 Differentiable vs Black-box</a>
+  <a href="#s110">1.10 No Free Lunch + ML</a>
+  <div class="grp">บทที่ 2 · Convex Optimization</div>
+  <a href="#s21">2.1 ทำไมต้อง Convex</a>
+  <a href="#s22">2.2 เซตคอนเวกซ์ + ผลรวมคอนเวกซ์</a>
+  <a href="#s23">2.3 ฟังก์ชันคอนเวกซ์ + Chord</a>
+  <a href="#s24">2.4 Epigraph</a>
+  <a href="#s25">2.5 เงื่อนไขอันดับ 1–2</a>
+  <a href="#s26">2.6 Composition Rules</a>
+  <a href="#s27">2.7 รูปแบบมาตรฐาน</a>
+  <a href="#s28">2.8 Local = Global</a>
+  <a href="#s29">2.9 เงื่อนไขมีข้อจำกัด</a>
+  <div class="grp">บทที่ 3 · Random & Local Search</div>
+  <a href="#s31">3.1 เมื่อไม่มีอนุพันธ์</a>
+  <a href="#s32">3.2 Grid vs Random</a>
+  <a href="#s33">3.3 Stochastic Hill Climbing</a>
+  <a href="#s34">3.4 Step Size & 20–50%</a>
+  <a href="#s35">3.5 กับดักเฉพาะที่</a>
+  <a href="#s36">3.6 ILS vs Restarts</a>
+  <a href="#s37">3.7 ออกแบบการทดลอง</a>
+  <div class="grp">บทที่ 4 · Gradient Descent</div>
+  <a href="#s41">4.1 อนุพันธ์ & เกรเดียนต์</a>
+  <a href="#s42">4.2 ทำไม −∇f ชันลงสุด</a>
+  <a href="#s43">4.3 กฎปรับปรุง + ขนาดก้าว</a>
+  <a href="#s44">4.4 หาอนุพันธ์ 3 วิธี</a>
+  <a href="#s45">4.5 Learning Rate η</a>
+  <a href="#s46">4.6 ขอบเขต 2/λmax</a>
+  <div class="grp">ภาคผนวก</div>
+  <a href="#cheat">🎯 สรุปสูตร + เช็คลิสต์</a>
+</nav>
+
+<main>
+<section class="card" id="howto">
+  <h2 class="chap"><span class="chapnum">🚀</span>วิธีใช้เล่มนี้ให้ "ได้เปรียบ" ในห้องสอบ</h2>
+  <ol class="tight">
+    <li><b>อ่านไล่จากบทที่ 1 → 4</b> เพราะบทหลังใช้ศัพท์จากบทก่อนหน้าเสมอ (เช่น บทที่ 3 ใช้คำว่า "function evaluations" จากบทที่ 1)</li>
+    <li>เจอสมการที่ไหน → อ่าน <b>ตารางชำแหละสัญลักษณ์</b> ใต้สมการนั้นก่อน แล้วกลับมาอ่านสมการอีกรอบ จะเห็นว่ามัน "พูด" อะไร</li>
+    <li>กล่อง <span style="color:#0e7490">🩵 ตัวอย่างจับมือทำ</span> = โจทย์จริง + คำนวณทีละบรรทัด / กล่อง <span style="color:#92400e">🟡 💡 เทคนิคตีโจทย์</span> = แปลคำในข้อสอบเป็นคำตอบ / กล่อง <span style="color:#b91c1c">🔴 ⚠️ กับดัก</span> = จุดที่ข้อสอบชอบหลอก</li>
+    <li>ศัพท์อังกฤษทุกคำจะมี (คำอ่านไทย — คำแปล) คร่อมไว้ตั้งแต่ครั้งแรกที่เจอ และมี <b>ตารางศัพท์หัวบท</b> ให้ทบทวน</li>
+    <li>ก่อนเข้าห้องสอบ อ่าน <a href="#cheat">ภาคผนวก: สรุปสูตร + เช็คลิสต์</a> รอบสุดท้าย</li>
+  </ol>
+  <div class="tip"><span class="t">🖨️ วิธีพิมพ์เป็น PDF (20+ หน้า A4)</span>
+  เปิดไฟล์ในเบราว์เซอร์ (ต่อเน็ตครั้งแรกเพื่อโหลดตัวเรนเดอร์สูตร) → รอสูตรโชว์ครบ → กด <b>Ctrl+P</b> → เลือก <b>Save as PDF</b> → กระดาษ <b>A4</b> → เปิด <b>Background graphics</b> → แต่ละบทเริ่มหน้าใหม่อัตโนมัติ</div>
+  <h4 class="mini">🗺️ แผนที่เชื่อมโยง 4 บท (โครงเรื่องทั้งวิชาใน 4 บรรทัด)</h4>
+  <div class="grid2">
+    <div class="mcard"><b>บทที่ 1 — ภาษากลางของวิชา</b><br>ปัญหา optimization หน้าตาเป็นอย่างไร วัดผลด้วยอะไร และทำไม "มิติสูง" ถึงโหด</div>
+    <div class="mcard"><b>บทที่ 2 — โลกอุดมคติ: Convex</b><br>ปัญหาคอนเวกซ์มีหลุมเดียว → local = global → หาเจอแน่ ไม่มีกับดัก</div>
+    <div class="mcard"><b>บทที่ 3 — ไม่มีอนุพันธ์: ใช้การสุ่ม</b><br>Black-box → Grid/Random search, Hill climbing, ILS + วิธีทดลองที่น่าเชื่อถือ</div>
+    <div class="mcard"><b>บทที่ 4 — มีอนุพันธ์: Gradient Descent</b><br>หัวใจของการเทรน ML: x ← x − η∇f และกฎการเลือกขนาดก้าว</div>
+  </div>
+</section>
+
+<!-- ================= CH 1 ================= -->
+<section class="card chapter" id="ch1">
+<h2 class="chap"><span class="chapnum">1</span>ภูมิทัศน์ของการหาค่าเหมาะที่สุด</h2>
+<p class="chapsub">The Optimization Landscape (เดอะ ออพทิไมเซชัน แลนด์สเคป — ภูมิประเทศของการหาค่าดีที่สุด) — บท "พจนานุกรม" ที่ทุกบทถัดไปต้องใช้</p>
+
+<table class="tbl"><tr><th style="width:34%">ศัพท์บทที่ 1 (อ่านว่า)</th><th style="width:26%">แปลว่า</th><th>ความหมายในวิชานี้</th></tr>
+<tr><td>Optimization (ออพทิไมเซชัน)</td><td>การหาค่าเหมาะที่สุด</td><td>การหาคำตอบที่ "ดีที่สุด" ตามเกณฑ์ที่กำหนด</td></tr>
+<tr><td>Candidate solution (แคนดิเดต โซลูชัน)</td><td>คำตอบที่เสนอ</td><td>คำตอบหนึ่งชุดที่กำลังลองอยู่</td></tr>
+<tr><td>Objective function (ออบเจกทีฟ ฟังก์ชัน)</td><td>ฟังก์ชันเป้าหมาย</td><td>เครื่องให้คะแนนว่าคำตอบดีแค่ไหน</td></tr>
+<tr><td>Evaluation cost (อีวาลิวเอชัน คอสต์)</td><td>ผล/ต้นทุนการประเมิน</td><td>ตัวเลขคะแนนที่ได้จากการประเมิน 1 ครั้ง</td></tr>
+<tr><td>Search space (เซิร์ช สเปซ)</td><td>ปริภูมิค้นหา</td><td>คำตอบที่เป็นไปได้ทั้งหมด</td></tr>
+<tr><td>Response surface (รีสปอนซ์ เซอร์เฟซ)</td><td>พื้นผิวตอบสนอง</td><td>ภูมิประเทศคะแนนเหนือพื้นที่ค้นหา</td></tr>
+<tr><td>Curse of dimensionality (เคอส ออฟ ไดเมนชันนาลิตี้)</td><td>คำสาปแห่งมิติ</td><td>ยิ่งมีมิติมาก พื้นที่โตแบบยกกำลัง</td></tr>
+<tr><td>Global optimum (โกลบอล ออพทิมัม)</td><td>ค่าดีที่สุดทั้งหมด</td><td>ดีที่สุดในทุกคำตอบ</td></tr>
+<tr><td>Local optimum (โลคัล ออพทิมัม)</td><td>ค่าดีที่สุดเฉพาะที่</td><td>ดีที่สุดแค่ในย่านใกล้เคียง</td></tr>
+<tr><td>Premature convergence (พรีเมเจอร์ คอนเวอร์เจนซ์)</td><td>การลู่เข้าก่อนกำหนด</td><td>รวมตัวที่จุดเดียวเร็วเกินไป</td></tr>
+<tr><td>Random restarts (แรนดอม รีสตาร์ท)</td><td>เริ่มต้นใหม่แบบสุ่ม</td><td>เริ่มค้นหาใหม่จากจุดสุ่ม</td></tr>
+<tr><td>Differentiable (ดิฟเฟอเรนเชียเบิล)</td><td>หาอนุพันธ์ได้</td><td>รู้สูตร หาความชันได้</td></tr>
+<tr><td>Black-box (แบล็ก-บ็อกซ์)</td><td>กล่องดำ</td><td>ใส่คำตอบได้คะแนนออก แต่ไม่รู้สูตรข้างใน</td></tr>
+<tr><td>No Free Lunch (โน ฟรี ลันช์)</td><td>ไม่มีมื้อฟรี</td><td>ไม่มีอัลกอริทึมใดชนะทุกปัญหา</td></tr></table>
+
+<h3 class="sec" id="s11">1.1 Optimization คืออะไร — เริ่มจากศูนย์จริงๆ</h3>
+<p><b>สัญชาตญาณก่อนสมการ:</b> นึกว่าคุณกำลังหาสูตรเค้กที่อร่อยที่สุด คุณปรับ 3 อย่าง: อุณหภูมิเตา เวลาเผา ปริมาณน้ำตาล ลองสูตรหนึ่ง → ชิม → ให้คะแนน ลองอีก → ชิม → ให้คะแนน แล้วใช้คะแนนพวกนั้นนำทางไปหาสูตรที่คะแนนสูงสุด <b>นี่คือ optimization ทั้งหมด</b>: มีตัวแปรที่ปรับได้ มีเครื่องให้คะแนน และเป้าหมายคือทำคะแนนให้ดีที่สุด</p>
+<div class="def"><b class="tag">นิยาม:</b> การหาค่าเหมาะที่สุด = การหา $x$ จากปริภูมิค้นหา $S$ ที่ทำให้ $f(x)$ ต่ำที่สุด (minimize — มินิไมซ์: ทำให้น้อยสุด) หรือสูงที่สุด (maximize — แม็กซิไมซ์: ทำให้มากสุด)</div>
+<div class="formula">$$\min_{x \in S} f(x)$$<span class="note">อ่านว่า "มินิไมซ์ เอฟ-ออฟ-เอ็กซ์ โดยที่เอ็กซ์อยู่ในเอส" = หา x ที่ทำให้ f ต่ำสุด โดย x ต้องเป็นคำตอบที่อนุญาตเท่านั้น</span></div>
+<table class="tbl"><tr><th style="width:18%">สัญลักษณ์ (อ่านว่า)</th><th style="width:36%">คืออะไรทางกายภาพ</th><th>ภาษาคนทั่วไป + ทำไมต้องมี</th></tr>
+<tr><td>$x$ ("เอ็กซ์")</td><td>ชุดตัวแปรที่ปรับได้ (มักเขียนเป็นเวกเตอร์ = กล่องตัวเลขหลายช่อง)</td><td>"สูตรเค้ก" — สิ่งที่เรากำลังหา ถ้าไม่มี x ก็ไม่มีอะไรให้ปรับ</td></tr>
+<tr><td>$f$ ("เอฟ")</td><td>เครื่องจักรที่รับ x ไปแปลงเป็นตัวเลขคะแนนเดียว</td><td>"เครื่องชิม" — กฎการให้คะแนน เช่น ยิ่งไม่อร่อยคะแนนยิ่งสูง</td></tr>
+<tr><td>$S$ ("เอส")</td><td>เซต (set — เซ็ต: กลุ่ม/ชุด) ของคำตอบที่อนุญาตทั้งหมด</td><td>"ขอบเขตที่เดินได้" — กันคำตอบไร้สาระ เช่น อุณหภูมิติดลบ</td></tr>
+<tr><td>$\mathbb{R}^n$ ("อาร์-เอ็น")</td><td>ปริภูมิของเวกเตอร์จริง n ช่อง</td><td>"ตารางพิกัด n ช่อง" — $\mathbb{R}^3$ = ตัวเลข 3 ค่าต่อกัน 1 ชุด</td></tr></table>
+<p class="small">เคล็ดลับ: ปัญหา "maximize g(x)" สามารถพลิกเป็น "minimize −g(x)" ได้เสมอ (ทำให้ค่าสูงสุดกลายเป็นค่าต่ำสุด) เพราะฉะนั้นต่อจากนี้เราพูดถึง "การ minimize" อย่างเดียวพอ — ทิศทางเดียว ง่ายต่อการคิด</p>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.1 — ปัญหา optimization จิ๋วให้เห็นภาพทั้งระบบ</span>
+<b>โจทย์:</b> หา x ที่ทำให้ $f(x) = (x-3)^2 + 1$ ต่ำสุด บนช่วง $S = [0, 6]$ (x ห้ามออกนอก 0 ถึง 6)<br>
+<b>ลองแทนค่าทีละจุด (แต่ละบรรทัด = "ชิม" 1 ครั้ง):</b><br>
+• x = 0 → $f(0) = (0-3)^2 + 1 = 9 + 1 = 10$<br>
+• x = 2 → $f(2) = (2-3)^2 + 1 = 1 + 1 = 2$<br>
+• x = 3 → $f(3) = (3-3)^2 + 1 = 0 + 1 = 1$ ← <b>ต่ำสุดที่เจอ</b><br>
+• x = 5 → $f(5) = (5-3)^2 + 1 = 4 + 1 = 5$<br>
+<b>อ่านผล:</b> คำตอบที่เสนอ (x) = ตัวเลขเดียว / เครื่องชิม (f) = ยกกำลังสองบวกหนึ่ง / คะแนนที่วัดได้ (y) = 10, 2, 1, 5 ตามลำดับ → ดีที่สุดคือ x = 3 (ได้คะแนน 1) — จบ เข้าใจง่าย นี่คือรูปแบบคิดของทั้งวิชา</div>
+
+<h3 class="sec" id="s12">1.2 องค์ประกอบ 3 อย่างของปัญหา Optimization (หัวใจข้อสอบ)</h3>
+<p>ทุกปัญหา optimization ไม่ว่าเล็กหรือใหญ่ มี <b>3 อย่าง</b>เสมอ — นี่คือหัวข้อที่ออกสอบบ่อยมาก:</p>
+<ol class="tight">
+<li><b>Candidate solution $x$ (แคนดิเดต โซลูชัน — คำตอบที่เสนอ):</b> คำตอบ 1 ชุดที่กำลังลอง เช่น สูตรเค้ก 1 สูตร, น้ำหนัก (weights — เวทส์: ค่าพารามิเตอร์) ของโมเดล AI 1 ชุด</li>
+<li><b>Objective function $f(x)$ (ออบเจกทีฟ ฟังก์ชัน — ฟังก์ชันเป้าหมาย):</b> เครื่องให้คะแนนว่าคำตอบนั้นดี/แย่แค่ไหน</li>
+<li><b>Evaluation cost $y$ (อีวาลิวเอชัน คอสต์ — ผลการประเมิน):</b> ตัวเลขที่ได้ออกมาเมื่อเสียบ x เข้า f — เขียนว่า $y = f(x)$</li>
+</ol>
+<div class="formula">$$y = f(x)$$<span class="note">"เสียบสูตร x เข้าเครื่องชิม f → ได้คะแนน y ออกมา" — สายพาน x → f → y คือหัวใจของทุกอย่างในวิชานี้</span></div>
+<table class="tbl"><tr><th style="width:16%">สัญลักษณ์</th><th style="width:34%">คืออะไรทางกายภาพ</th><th>ภาษาคนทั่วไป</th></tr>
+<tr><td>$y$ ("วาย")</td><td>ตัวเลขผลลัพธ์ที่วัดได้จากการประเมิน 1 ครั้ง</td><td>"คะแนนที่ได้จากการชิม" — เป็นผลลัพธ์ ไม่ใช่สิ่งที่เราเลือกเอง</td></tr>
+<tr><td>$f(x)$ ("เอฟ ออฟ เอ็กซ์")</td><td>กระบวนการประเมินคำตอบ x</td><td>"การเอา x ไปผ่านเครื่องชิม" — สังเกตว่าเขียนติดกันเพราะ x ถูก "ป้อน" เข้าไปใน f</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.2 — หา 3 องค์ประกอบจากสถานการณ์จริง (โจทย์แบบนี้ออกสอบบ่อย)</span>
+<b>สถานการณ์:</b> คุณจูน (tune — ทูน: ปรับแต่ง) การตั้งค่าโมเดล AI ด้วย 2 ค่า: อัตราการเรียนรู้ และขนาดชุดข้อมูลต่อรอบ แล้วเทรนโมเดลจริงเพื่อดูความคลาดเคลื่อน<br>
+<b>แยกทีละองค์ประกอบ:</b><br>
+• <b>x (คำตอบที่เสนอ)</b> = คู่ค่า (อัตราการเรียนรู้ = 0.01, ขนาดชุด = 64) ← 1 ชุดการตั้งค่า = คำตอบ 1 ชุด<br>
+• <b>f (เครื่องให้คะแนน)</b> = กระบวนการ "เอาค่านี้ไปเทรนโมเดลแล้ววัดความคลาดเคลื่อน"<br>
+• <b>y (ผลที่วัดได้)</b> = 0.12 (ความคลาดเคลื่อน 12%) ← ตัวเลขเดียวที่ได้กลับมา<br>
+<b>สังเกต:</b> ทุกครั้งที่เปลี่ยน x ต้อง "เทรนใหม่ทั้งรอบ" เพื่อได้ y ใหม่ → การประเมิน 1 ครั้งแพงมาก (จะกลับมาเป็นแนวคิด "function evaluations" ในหัวข้อ 1.6)</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์ (เจอคำนี้ ตอบข้อนี้)</span> เจอ "องค์ประกอบของปัญหา optimization มีอะไรบ้าง" → ตอบ <b>Candidate solution (x), Objective function (f(x)), Evaluation cost (y)</b> — จำสั้นๆ ว่า <b>"X–F–Y: คำตอบ → เครื่องชิม → คะแนน"</b> ระวังอย่าตอบสลับ: y คือ "ผลที่วัดได้" ไม่ใช่คำตอบที่เราหา</div>
+
+<h3 class="sec" id="s13">1.3 ปริภูมิค้นหา (Search Space — เซิร์ช สเปซ)</h3>
+<p><b>สัญชาตญาณ:</b> search space = "แผนที่ของคำตอบที่เป็นไปได้ทุกจุด" เหมือนแผนที่เกมที่คุณเดินได้ทุกช่อง ถ้าปรับได้ 2 ค่า (อุณหภูมิ, เวลา) แผนที่คือพื้นราบ 2 มิติ ถ้าปรับได้ n ค่า ก็คือปริภูมิ n มิติ — อัลกอริทึม optimization ก็คือ "กลยุทธ์การเดิน" บนแผนที่นี้</p>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.3 — นับขนาดปริภูมิค้นหา</span>
+<b>โจทย์ (a):</b> เครื่องผสมขนมมีปุ่ม 2 ปุ่ม แต่ละปุ่มหมุนได้ 5 ระดับ ปริภูมิค้นหามีคำตอบกี่คำตอบ?<br>
+• คำตอบ 1 ชุด = (ระดับปุ่ม A, ระดับปุ่ม B) เช่น (2, 4)<br>
+• ปุ่ม A เลือกได้ 5 แบบ × ปุ่ม B เลือกได้ 5 แบบ = $5 \times 5 = 25$ คำตอบ<br>
+<b>โจทย์ (b):</b> ถ้าแต่ละปุ่มปรับเป็น "ค่าต่อเนื่อง" ได้ทุกค่าในช่วง 0–1 (เช่น 0.371 ก็ได้)<br>
+• จำนวนคำตอบ = <b>อนันต์</b> (นับไม่ถ้วน) — เราจึงต้องพึ่ง "กลยุทธ์การเดิน" ไม่ใช่การไล่ดูทีละจุด</div>
+
+<h3 class="sec" id="s14">1.4 พื้นผิวตอบสนอง (Response Surface — รีสปอนซ์ เซอร์เฟซ)</h3>
+<p><b>สัญชาตญาณ:</b> เอาคะแนน $f(x)$ ของทุกจุดในปริภูมิค้นหา มา "วางเป็นความสูง" ซ้อนบนแผนที่ — จุดที่ f สูง = ภูเขา, จุดที่ f ต่ำ = หุบเขา ภูมิประเทศจำลองนี้คือ <b>response surface</b> (พื้นผิวตอบสนอง) เพราะมัน "ตอบสนอง" ต่อการเปลี่ยน x ด้วยการเปลี่ยนค่า f</p>
+<div class="warn"><span class="t">⚠️ กับดักข้อสอบ — สองคำนี้ไม่เหมือนกัน!</span> <b>Search space = แผนที่ตำแหน่ง</b> (มีแต่พิกัด x) / <b>Response surface = แผนที่ตำแหน่ง + ความสูง f</b> (ภูมิประเทศเต็มรูปแบบ) — ข้อสอบชอบสลับสองคำนี้ให้ตอบผิด</div>
+<p><b>ประเด็นสำคัญ:</b> ในโลกจริงเรา <b>มองเห็น response surface ได้แค่จุดที่เราไปแตะเท่านั้น</b> — เหมือนนักสำรวจเดินกลางหมอกหนา มีเทปวัดความสูง ยืนตรงไหนก็รู้แค่ความสูงจุดนั้น ไม่เห็นภูมิประเทศรอบตัว (จำไว้ มันจะเชื่อมกับ black-box ในหัวข้อ 1.9)</p>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.4 — วาด response surface เองจากฟังก์ชัน</span>
+<b>โจทย์:</b> $f(x) = (x-2)^2$ บนช่วง $S=[0,4]$ — คำนวณความสูงทีละจุด:<br>
+• x = 0 → $f(0) = (0-2)^2 = 4$ (ยอดเขาซ้าย)<br>
+• x = 1 → $f(1) = (1-2)^2 = 1$<br>
+• x = 2 → $f(2) = 0$ ← <b>ก้นหุบเขา (จุดต่ำสุด)</b><br>
+• x = 3 → $f(3) = 1$ / x = 4 → $f(4) = 4$ (ยอดเขาขวา)<br>
+<b>อ่านผล:</b> ถ้าวางแกนนอน = x และแกนตั้ง = f จะได้รูปตัว U คว่ำลง = หุบเขารูปถ้วย มีก้นที่ x = 2 — นี่คือ response surface ของปัญหานี้</div>
+
+<h3 class="sec" id="s15">1.5 คำสาปแห่งมิติ (Curse of Dimensionality — เคอส ออฟ ไดเมนชันนาลิตี้)</h3>
+<p><b>สัญชาตญาณ:</b> สำรวจเส้นตรง 1 มิติ วางจุดห่างเท่าๆ กัน 10 จุดก็ครบ แต่ตาราง 2 มิติต้องใช้ $10 \times 10 = 100$ จุด ลูกบาศก์ 3 มิติต้อง $10^3 = 1{,}000$ จุด — <b>ทุกครั้งที่เพิ่ม 1 มิติ จำนวนจุดโตขึ้น 10 เท่าเสมอ</b> → n มิติต้องใช้ $10^n$ จุด ซึ่งโตแบบ <b>exponential (เอ็กซ์โพเนนเชียล — ยกกำลัง)</b> จนคอมพิวเตอร์ไหว</p>
+<figure class="fig">
+<svg viewBox="0 0 720 260">
+  <text x="120" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">1 มิติ</text>
+  <line x1="45" y1="85" x2="195" y2="85" stroke="#64748b" stroke-width="2"/>
+  <circle cx="45" cy="85" r="3" fill="#2563eb"/><circle cx="61.7" cy="85" r="3" fill="#2563eb"/><circle cx="78.3" cy="85" r="3" fill="#2563eb"/><circle cx="95" cy="85" r="3" fill="#2563eb"/><circle cx="111.7" cy="85" r="3" fill="#2563eb"/><circle cx="128.3" cy="85" r="3" fill="#2563eb"/><circle cx="145" cy="85" r="3" fill="#2563eb"/><circle cx="161.7" cy="85" r="3" fill="#2563eb"/><circle cx="178.3" cy="85" r="3" fill="#2563eb"/><circle cx="195" cy="85" r="3" fill="#2563eb"/>
+  <text x="120" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">10 จุด</text>
+  <text x="355" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">2 มิติ</text>
+  <rect x="280" y="45" width="150" height="150" fill="url(#pattG)" stroke="#cbd5e1" rx="4"/>
+  <text x="355" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">100 จุด</text>
+  <text x="575" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">3 มิติ</text>
+  <rect x="520" y="31" width="150" height="150" fill="#bfdbfe" opacity="0.35" stroke="#93c5fd" rx="4"/>
+  <rect x="510" y="38" width="150" height="150" fill="#bfdbfe" opacity="0.5" stroke="#93c5fd" rx="4"/>
+  <rect x="500" y="45" width="150" height="150" fill="url(#pattG)" stroke="#cbd5e1" rx="4"/>
+  <text x="575" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">1,000 จุด (แผ่น ×10 ชั้น)</text>
+  <text x="360" y="240" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0f172a">เพิ่มทีละ 1 มิติ → งบโต ×10 เสมอ (10 → 100 → 1,000 → … → 10ⁿ)</text>
+  <text x="360" y="256" text-anchor="middle" font-size="11.5" fill="#64748b">การโตแบบยกกำลังนี้คือ "คำสาปแห่งมิติ" — ไล่จุดทีละจุดไม่มีทางทัน</text>
+  <defs><pattern id="pattG" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="2" fill="#3b82f6"/></pattern></defs>
+</svg>
+<figcaption>ภาพที่ 1.1 — จำนวนจุดที่ต้องสำรวจโตแบบ $10^n$ เมื่อจำนวนมิติเพิ่มขึ้น</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.5 — รู้สึกถึง "คำสาป" ด้วยตัวเลขจริง</span>
+<b>โจทย์:</b> สำรวจทุกจุดในตาราง โดยแต่ละมิติแบ่งเป็น 10 ระดับ และประเมิน 1 จุดใช้เวลา 1 มิลลิวินาที (0.001 วินาที) — ใช้เวลาเท่าไหร่เมื่อจำนวนมิติเพิ่ม?<br>
+• 1 มิติ: $10^1 = 10$ จุด → 10 มิลลิวินาที (แสนวินาที — จบทันที)<br>
+• 4 มิติ: $10^4 = 10{,}000$ จุด → 10,000 มิลลิวินาที = 10 วินาที<br>
+• 6 มิติ: $10^6 = 1{,}000{,}000$ จุด → $10^6$ มิลลิวินาที = $10^3$ วินาที ≈ 17 นาที<br>
+• 10 มิติ: $10^{10}$ จุด → $10^7$ วินาที ÷ 86,400 (วินาทีต่อวัน) ≈ <b>116 วัน!</b><br>
+• 13 มิติ: $10^{13}$ จุด → $10^{10}$ วินาที ≈ <b>317 ปี!</b><br>
+<b>สรุป:</b> เพิ่มมิติแค่หยิบมือ ปัญหาเปลี่ยนจาก "วินาที" เป็น "ปี" — นี่คือเหตุผลที่ต้องใช้อัลกอริทึมฉลาด ไม่ใช่ไล่ตรวจทุกจุด (brute force — บรูท ฟอร์ซ: ตรวจหมดทุกกรณี)</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "ทำไม optimization ในมิติสูงถึงยาก" → ตอบว่า <b>จำนวนจุด/พื้นที่ที่ต้องสำรวจโตแบบยกกำลังตามจำนวนมิติ ($10^n$)</b> ทำให้ข้อมูลเบาบางและไล่สำรวจทั้งหมดไม่ทัน — ห้ามตอบกว้างๆ ว่า "เพราะข้อมูลเยอะ"</div>
+
+<h3 class="sec" id="s16">1.6 วัดกันด้วยอะไร: Function Evaluations (ฟังก์ชัน อีวาลิวเอชันส์ — การเรียกใช้ฟังก์ชัน)</h3>
+<p>เวลาเทียบ "อัลกอริทึม A เก่งกว่า B ไหม" การจับเวลาเป็นวินาที <b>ไม่ยุติธรรม</b> เพราะผลขึ้นกับเครื่อง ภาษาโปรแกรม และฝีมือเขียนโค้ด สิ่งที่ยุติธรรมกว่าคือนับ <b>จำนวนครั้งที่ต้องเรียกใช้ฟังก์ชันเป้าหมาย (function evaluations)</b> — เพราะแต่ละครั้งอาจแพงมาก (เช่น รันจำลองโรงงาน 1 ครั้ง = 1 ชั่วโมง) และการ "นับครั้ง" ให้ตัวเลขเดียวกันไม่ว่ารันบนเครื่องไหน</p>
+<div class="def"><b class="tag">Budget $B$ (บัดเจ็ต — งบประมาณ):</b> เพดานจำนวน function evaluations ที่อนุญาต เช่น "ทุกอัลกอริทึมเรียก f ได้ 1,000 ครั้งเท่ากัน" — เป็นกติกามาตรฐานของการแข่งขันที่เป็นธรรม (จะใช้อีกทีในบทที่ 3)</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.6 — เทียบ 2 อัลกอริทึมแบบถูกวิธี</span>
+<b>โจทย์:</b> อัลกอริทึม A รันเสร็จใน 5 วินาที ใช้การเรียก f 300 ครั้ง จบที่ค่า f = 0.05 / อัลกอริทึม B รันเสร็จใน 20 วินาที เรียก f 300 ครั้ง จบที่ค่า f = 0.02 — ใครดีกว่า?<br>
+<b>ตอบ:</b> งบเท่ากัน (300 ครั้ง) → เทียบ "คุณภาพคำตอบปลายทาง": B ได้ f = 0.02 ต่ำกว่า (ดีกว่า เพราะเรา minimize) → <b>B ชนะ</b><br>
+<b>ทำไมไม่ดูเวลา:</b> เพราะถ้าเอา B ไปรันบนเครื่องเร็วกว่า อาจเสร็จใน 4 วินาที — เวลาเปลี่ยนได้ตามเครื่อง แต่ "จำนวนครั้งที่เรียก f" กับ "ค่า f ปลายทาง" ไม่เปลี่ยน → จึงเป็นไม้วัดที่เป็นธรรม</div>
+
+<h3 class="sec" id="s17">1.7 Global Optimum vs Local Optimum (โกลบอล ออพทิมัม vs โลคัล ออพทิมัม)</h3>
+<div class="def"><b class="tag">Global optimum $x^*$:</b> จุดที่ $f(x^*) \le f(x)$ เทียบกับ $x$ <i>ทุกจุดใน search space</i> — "ต่ำสุดของทั้งประเทศ"<br>
+<b class="tag">Local optimum:</b> จุดที่ต่ำกว่า <i>เพื่อนบ้านรอบๆ</i> (บริเวณใกล้เคียงเท่านั้น) — "ต่ำสุดของหมู่บ้านตัวเอง"</div>
+<table class="tbl"><tr><th style="width:20%">สัญลักษณ์</th><th>คืออะไร</th></tr>
+<tr><td>$x^*$ ("เอ็กซ์-สตาร์")</td><td>คำตอบที่ดีที่สุด (ดาว = "ฉลากคำตอบที่เราตามหา") — ถ้าเห็นดาวติดท้ายตัวแปรไหน แปลว่า "เวอร์ชันดีที่สุดของตัวนั้น"</td></tr>
+<tr><td>$\le$ ("น้อยกว่าหรือเท่ากับ")</td><td>ค่าฝั่งซ้ายต้องไม่มากกว่าฝั่งขวาจุดใดเลย</td></tr></table>
+<figure class="fig">
+<svg viewBox="0 0 380 240">
+  <line x1="20" y1="200" x2="365" y2="200" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aB)"/>
+  <line x1="30" y1="200" x2="30" y2="38" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#aB)"/>
+  <text x="38" y="50" font-size="11" fill="#64748b">f(x)</text><text x="342" y="214" font-size="11" fill="#64748b">x</text>
+  <text x="22" y="28" font-size="11" font-weight="bold" fill="#16a34a">ต่ำ = ดี</text>
+  <path d="M 25 60 C 45 150 62 168 80 162 C 98 156 106 100 125 98 C 143 96 150 180 168 180 C 186 180 194 110 212 112 C 230 114 240 150 258 148 C 276 146 288 70 305 62" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="80" cy="162" r="5" fill="#f59e0b"/><circle cx="258" cy="148" r="5" fill="#f59e0b"/><circle cx="168" cy="180" r="6" fill="#16a34a"/>
+  <text x="80" y="146" font-size="11" fill="#b45309" text-anchor="middle">Local</text>
+  <text x="258" y="132" font-size="11" fill="#b45309" text-anchor="middle">Local</text>
+  <text x="168" y="164" font-size="11.5" font-weight="bold" fill="#15803d" text-anchor="middle">Global</text>
+  <circle cx="80" cy="222" r="5" fill="#f59e0b"/><text x="90" y="226" font-size="11.5" fill="#475569">ต่ำสุดเฉพาะที่ (แค่ย่านตัวเอง)</text>
+  <circle cx="280" cy="222" r="6" fill="#16a34a"/><text x="290" y="226" font-size="11.5" fill="#475569">ต่ำสุดทั้งหมด (ทั้งประเทศ)</text>
+</svg>
+<figcaption>ภาพที่ 1.2 — Response surface หลายหลุม: <b>local optimum</b> ต่ำสุดเฉพาะย่านใกล้เคียง / <b>global optimum</b> ต่ำสุดของทั้งประเทศ — อัลกอริทึมที่มองแค่รอบตัวจึงติด local ได้</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.7 — หา local/global จากภูมิประเทศแบบตาราง (ไม่ต้องใช้แคลคูลัส)</span>
+<b>โจทย์:</b> ปริภูมิค้นหามี 10 จุด (จุดที่ 1–10) ค่า f เรียงดังนี้:<br>
+[5, <b>3</b>, 4, 6, <b>2</b>, 3, 7, 4, 5, 6]<br>
+<b>วิธีตรวจ (จุดไหนคือ local min? — เทียบกับเพื่อนบ้านซ้าย-ขวา):</b><br>
+• จุดที่ 2 (ค่า 3): เพื่อนบ้านคือ 5 (ซ้าย) และ 4 (ขวา) → 3 ต่ำกว่าทั้งคู่ → <b>local minimum</b> ✓<br>
+• จุดที่ 5 (ค่า 2): เพื่อนบ้านคือ 6 (ซ้าย) และ 3 (ขวา) → 2 ต่ำกว่าทั้งคู่ → <b>local minimum</b> ✓<br>
+• จุดที่ 8 (ค่า 4): เพื่อนบ้าน 7 กับ 5 → 4 ต่ำกว่าทั้งคู่ → <b>local minimum</b> ✓<br>
+<b>เทียบทุก local กัน:</b> ค่า 2 < 3 < 4 → จุดที่ 5 (ค่า 2) ต่ำสุดในบรรดาคำตอบทั้งหมด → <b>global minimum</b><br>
+<b>ข้อสรุปสำคัญ:</b> local minimum มีได้หลายจุด (ตรงนี้ 3 จุด) แต่ global มีจุดเดียว — อัลกอริทึมที่เดินลงเขาอย่างเดียวอาจไปหยุดที่จุดที่ 2 หรือ 8 แล้วคิดว่า "จบแล้ว" ทั้งที่จุดที่ 5 ยังรออยู่</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "ต่ำสุดเมื่อเทียบกับจุดรอบๆ/เพื่อนบ้าน" → <b>Local optimum</b> / เจอ "ต่ำสุดในบรรดาคำตอบที่เป็นไปได้ทั้งหมด" → <b>Global optimum</b> — อ่าน "ขอบเขตการเทียบ" ให้ดี: รอบๆ = local, ทั้งหมด = global</div>
+
+<h3 class="sec" id="s18">1.8 การลู่เข้าก่อนกำหนด (Premature Convergence) และการเริ่มต้นใหม่แบบสุ่ม (Random Restarts)</h3>
+<p><b>สัญชาตญาณ:</b> ทีมสำรวจ 50 คนลงเนินหาจุดต่ำสุด ทุกคนวิ่งตามกันเข้าหลุมแรกที่เจอแล้วยืนกอดกันอยู่ในนั้น ทั้งที่หลังเนินมีหลุมลึกกว่ารออยู่ — กลุ่ม "เสียความหลากหลาย" เร็วเกินไป สำรวจยังไม่ครบก็รวมตัวแล้ว</p>
+<div class="def"><b class="tag">Premature convergence (พรีเมเจอร์ คอนเวอร์เจนซ์ — การลู่เข้าก่อนกำหนด):</b> การที่อัลกอริทึม/กลุ่มคำตอบรวมตัวกันที่จุดเดียวเร็วเกินไป จนความหลากหลาย (diversity — ไดเวอร์ซิตี้) หายไป การสำรวจ (exploration — เอ็กซ์พลอเรชัน: ตะลุยหาพื้นที่ใหม่) จบก่อนกำหนด และมักจบที่ local optimum</div>
+<h4 class="mini">ทางแก้พื้นฐาน: Random Restarts (แรนดอม รีสตาร์ท — เริ่มใหม่แบบสุ่ม)</h4>
+<pre class="code">best = ∞
+for r = 1 … R:              <span class="c"># วิ่ง R รอบ แต่ละรอบ "อิสระ" จากกัน</span>
+    x = สุ่มจุดใน S          <span class="c"># เริ่มจากจุดสุ่ม ไม่เกี่ยวกับรอบก่อน</span>
+    x = local_search(x)     <span class="c"># เดินลงเขาจนติด local optimum</span>
+    best = min(best, f(x))  <span class="c"># จดสถิติดีที่สุดที่เคยเจอ</span>
+return best</pre>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.8 — ทำไม "เริ่มใหม่หลายรอบ" ทำให้เจอคำตอบดีแทบแน่นอน</span>
+<b>โจทย์:</b> สมมติ 1 รอบมีโอกาส 90% ที่จะไปจบในหลุมที่ดี ($p = 0.9$) — ถ้าเริ่มใหม่ 5 รอบ (อิสระจากกัน) โอกาสที่ "<b>อย่างน้อย 1 รอบ</b>เจอหลุมดี" เท่าไหร่?<br>
+<b>ขั้น 1:</b> โอกาสที่ 1 รอบ "พลาด" = $1 - 0.9 = 0.1$<br>
+<b>ขั้น 2:</b> โอกาสที่ "พลาดทั้ง 5 รอบ" = คูณกันทีละรอบ (เพราะอิสระจากกัน) = $0.1^5 = 0.00001$<br>
+<b>ขั้น 3:</b> โอกาสที่ "ไม่พลาดหมด" (มีอย่างน้อย 1 รอบเจอ) = $1 - 0.00001 = 0.99999$ = <b>99.999%</b><br>
+<b>อ่านผล:</b> จาก 90% พุ่งเป็น 99.999% — ยิ่งเริ่มใหม่เยอะ โอกาส "ซวยทุกรอบ" ยิ่งเข้าใกล้ศูนย์ (แบบ $p^R$)</div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> เงื่อนไขสำคัญของ restarts คือ <b>ความเป็นอิสระ</b> — ถ้า "เริ่มใหม่" แต่เริ่มใกล้ๆ จุดเดิมทุกครั้ง ก็ยังติดหลุมเดิม ไม่ใช่ restart ที่แท้จริง</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "เสียความหลากหลายเร็ว / รวมตัวที่จุดเดียวเร็วเกินไป" → ตอบ <b>Premature convergence</b> + ทางแก้พื้นฐานคือ <b>Random restarts</b></div>
+
+<h3 class="sec" id="s19">1.9 การจำแนกตามความสามารถในการหาอนุพันธ์: Differentiable vs Black-box</h3>
+<p>คำถามแรกก่อนเลือกอัลกอริทึมเสมอ: <b>"เรารู้จัก f แค่ไหน?"</b></p>
+<table class="tbl">
+<tr><th>ประเภท</th><th>เรารู้อะไร</th><th>ต้องใช้วิธีไหน</th><th>ตัวอย่างจริง</th></tr>
+<tr><td><b>Differentiable</b> (ดิฟเฟอเรนเชียเบิล — หาอนุพันธ์ได้, บางทีเรียก white-box = กล่องขาว)</td><td>รู้สูตร f ชัดเจน → หาความชัน $\nabla f$ นำทางได้</td><td>วิธีที่ใช้เกรเดียนต์ (บทที่ 4)</td><td>$f(x) = x^2 + 3x$; ค่า loss ของ neural network</td></tr>
+<tr><td><b>Black-box</b> (แบล็ก-บ็อกซ์ — กล่องดำ)</td><td>ใส่ x ได้ y ออก เท่านั้น — ไม่มีสูตร ไม่มีอนุพันธ์</td><td>วิธีสุ่ม/ไม่ใช้อนุพันธ์ (บทที่ 3)</td><td>จูนค่าตั้งต้นของโมเดล (ต้องเทรนจริงถึงรู้ผล), จำลองโรงงาน, A/B test</td></tr>
+</table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.9 — จำแนก 3 สถานการณ์ (โจทย์ข้อสอบชอบให้แบบนี้)</span>
+<b>สถานการณ์ (ก):</b> $f(x) = 3x^2 + 2x$ → มีสูตรชัด หาอนุพันธ์ได้ ($f'(x) = 6x + 2$) → <b>Differentiable</b><br>
+<b>สถานการณ์ (ข):</b> อยากรู้ว่าค่าตั้งต้นชุดไหนทำให้โมเดลแม่นสุด แต่ต้อง "เทรน 20 นาที" ทุกครั้งถึงจะรู้คะแนน → ไม่มีสูตรปิด (closed-form) ให้หาอนุพันธ์ → <b>Black-box</b><br>
+<b>สถานการณ์ (ค):</b> ร้านค้าออนไลน์ลอง 2 แบบหน้าเว็บ (A/B test) แล้วดูยอดขาย → ได้แค่ตัวเลขผลจริง → <b>Black-box</b><br>
+<b>สรุปกฎง่ายๆ:</b> ถ้าต้อง "รันจริง/ทดลองจริง" เพื่อได้ค่า = Black-box / ถ้ามีสูตรหาความชันได้ = Differentiable</div>
+<div class="warn"><span class="t">⚠️ กับดัก</span> "เขียนโปรแกรมคำนวณ f ได้" ≠ "หาอนุพันธ์ได้" — อนุพันธ์ต้องมาจากสูตรหรือเทคนิคพิเศษ (หัวข้อ 4.4) ไม่ใช่แค่ผลการรันโปรแกรม</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "เรียกใช้ f ได้อย่างเดียว / ไม่รู้สูตร / ไม่มีอนุพันธ์ / ต้องรันการจำลอง" → นี่คือ <b>Black-box</b> → ต้องใช้วิธีสุ่ม (บทที่ 3) — <b>ห้าม</b>ตอบ Gradient Descent เด็ดขาด เพราะมันต้องใช้อนุพันธ์!</div>
+
+<h3 class="sec" id="s110">1.10 ทฤษฎี No Free Lunch (โน ฟรี ลันช์ — "ไม่มีมื้อฟรี") และการเชื่อมโยงกับ Machine Learning</h3>
+<div class="def"><b class="tag">ทฤษฎีบท No Free Lunch (NFL):</b> ถ้าเอาผลงานของอัลกอริทึม optimization สองตัวอะไรก็ได้ มาเฉลี่ยกัน "เหนือปัญหาที่เป็นไปได้ทั้งหมด" ค่าเฉลี่ยจะ<b>เท่ากันพอดี</b> — สรุปสั้นๆ: ไม่มีอัลกอริทึมใดชนะทุกปัญหา</div>
+<p><b>สัญชาตญาณ — ทำไมถึง "ไม่มีเทพ":</b> อัลกอริทึมที่ดูฉลาด จริงๆ คือการ "เดาโครงสร้าง" ของปัญหา (เดาว่า smooth — สมูท: เรียบต่อเนื่อง, เดาว่าคอนเวกซ์ ฯลฯ) เหมือนกุญแจที่เซาะร่องมาเป๊ะกับล็อกดอกนี้ — เปิดดอกนี้ลื่นไหล แต่เอาไปเปิดดอกอื่นไม่ได้เลย ทฤษฎีบอกว่า จำนวนปัญหาที่อัลกอริทึม A ชนะ = จำนวนปัญหาที่ A แพ้คืนพอดี</p>
+<ul class="tight">
+<li><b>ผลสืบเนื่อง 1:</b> ต้อง <b>จับคู่</b> อัลกอริทึมกับโครงสร้างปัญหา (มีอนุพันธ์ → ใช้เกรเดียนต์ / black-box → ใช้วิธีสุ่ม)</li>
+<li><b>ผลสืบเนื่อง 2:</b> ต้อง <b>ทดลองเทียบกันจริง</b> บนปัญหาที่เราสนใจ (เป็นที่มาของหัวข้อ 3.7)</li>
+<li><b>เชื่อมโยงกับ Machine Learning (แมชชีน เลิร์นนิง — การให้เครื่องเรียนรู้):</b> หลักการเดียวกัน — ไม่มีโมเดลเดียวที่ดีที่สุดกับทุกชุดข้อมูล จึงต้องลองหลายโมเดล แล้วใช้ชุดตรวจสอบ (validation set — แวลิเดชัน เซ็ต: ข้อมูลไว้ตรวจคุณภาพโมเดล) เป็นผู้ตัดสิน</li>
+</ul>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 1.10 — ใช้ NFL ตอบสถานการณ์จริง</span>
+<b>สถานการณ์:</b> เพื่อนอวดว่า "อัลกอริทึม X เทพสุด ชนะทุกโจทย์แน่นอน"<br>
+<b>ตอบด้วย NFL:</b> ไม่มีอัลกอริทึมใดชนะทุกปัญหา (นั่นคือตัวทฤษฎีบท) — ความเก่งของ X ต้องมาจากการ "เข้ากับโครงสร้างปัญหาประเภทหนึ่ง" พอดี ถ้าเอาไปใช้กับปัญหาโครงสร้างต่างออกไป อาจแย่กว่าวิธีธรรมดาก็ได้<br>
+<b>สิ่งที่ควรทำแทน:</b> (1) ดูว่าปัญหาเรามีอนุพันธ์ไหม (2) เลือกอัลกอริทึมที่เหมาะ (3) รันเทียบกันจริงด้วยงบเท่ากัน — อย่าเชื่อคำโฆษณา "เทพทุกงาน"<br>
+<b>ในบริบท ML:</b> เหมือนกัน — อย่าถาม "โมเดลไหนดีที่สุดในโลก" ให้ถาม "โมเดลไหนดีที่สุดสำหรับข้อมูลชุดนี้" แล้วพิสูจน์ด้วย validation</div>
+<div class="warn"><span class="t">⚠️ อ่าน NFL ให้ขาด — ตีความผิดที่พบบ่อยสุด</span> NFL <b>ไม่ได้</b>แปลว่า "บนปัญหาจริงทุกอัลกอริทึมเก่งเท่ากัน" — มันหมายถึงค่าเฉลี่ย "เหนือปัญหาทั้งหมดที่นึกออก" (รวมปัญหากวนโซ่ที่ไม่มีใครใช้จริง) บนปัญหาจริงที่มีโครงสร้างสวยงาม อัลกอริทึมที่เหมาะสมชนะขาด!</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "ผลของ No Free Lunch" → ตอบ 2 ข้อ: (1) ไม่มีอัลกอริทึมที่ดีที่สุดสำหรับทุกปัญหา (2) จึงต้องเลือกอัลกอริทึมให้เข้ากับโครงสร้างปัญหา และเทียบกันด้วยการทดลองจริง</div>
+</section>
+
+<!-- ================= CH 2 ================= -->
+<section class="card chapter" id="ch2">
+<h2 class="chap"><span class="chapnum">2</span>การหาค่าเหมาะที่สุดแบบคอนเวกซ์</h2>
+<p class="chapsub">Convex Optimization (คอนเวกซ์ ออพทิไมเซชัน — การหาค่าเหมาะสุดในโลก "นูน") — โลกอุดมคติที่ "หาเจอแน่นอน 100%"</p>
+
+<table class="tbl"><tr><th style="width:34%">ศัพท์บทที่ 2 (อ่านว่า)</th><th style="width:26%">แปลว่า</th><th>ความหมายในวิชานี้</th></tr>
+<tr><td>Convex (คอนเวกซ์)</td><td>นูน</td><td>รูปทรง/ฟังก์ชันแบบ "ชาม" ไม่มีบุ๋ม</td></tr>
+<tr><td>Convex set (คอนเวกซ์ เซ็ต)</td><td>เซตคอนเวกซ์</td><td>รูปทรงที่ลากเส้นในรูปแล้วไม่หลุดออกนอกรูป</td></tr>
+<tr><td>Convex combination (คอนเวกซ์ คอมบิเนชัน)</td><td>ผลรวมคอนเวกซ์</td><td>การผสมจุดด้วยน้ำหนักที่รวม = 1</td></tr>
+<tr><td>Chord (คอร์ด)</td><td>เส้นตรงเชื่อมสองจุด</td><td>ไม้คาบระหว่างสองจุดบนกราฟ</td></tr>
+<tr><td>Epigraph (อีพิกราฟ)</td><td>ภูมิภาคเหนือกราฟ</td><td>พื้นที่ทั้งหมดที่อยู่บน/เหนือกราฟ f</td></tr>
+<tr><td>Tangent (แทนเจนต์)</td><td>เส้น/ระนาบสัมผัส</td><td>เส้นตรงที่แตะกราฟพอดีที่จุดหนึ่ง</td></tr>
+<tr><td>Hessian (เฮสเซียน)</td><td>เมทริกซ์อนุพันธ์อันดับสอง</td><td>เครื่องวัด "ความโค้ง" หลายมิติ</td></tr>
+<tr><td>Positive semidefinite (พอซิทีฟ เซมิดิฟินิต)</td><td>กึ่งบวกแน่นอน</td><td>โค้งขึ้นในทุกทิศ (สัญลักษณ์ ⪰ 0)</td></tr>
+<tr><td>Affine (แอฟฟิน)</td><td>เชิงเส้น + ค่าคงที่</td><td>รูป $a^\top x + b$ — เส้นตรง/ระนาบเอียง</td></tr>
+<tr><td>Feasible (ฟีซิเบิล)</td><td>ทำได้/ผ่านเงื่อนไข</td><td>คำตอบที่ไม่ละเมิดข้อจำกัดใดๆ</td></tr></table>
+
+<h3 class="sec" id="s21">2.1 ทำไมโลกต้องมี "คอนเวกซ์"</h3>
+<p>บทที่ 1 จบด้วยโศกนาฏกรรม local optimum (ติดหลุมตื้นทั้งที่มีหลุมลึกกว่า) — บทนี้คือโลกอุดมคติ: ปัญหามีหลุมเดียว ลาดลงอย่างเดียว ไม่มีกับดัก อัลกอริทึมง่ายๆ ก็ไหลลงถึงก้นแน่นอน และ <b>local = global</b> (หลุมที่ติด = หลุมที่ดีที่สุดเสมอ)</p>
+<figure class="fig">
+<svg viewBox="0 0 700 230">
+  <text x="185" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">Convex — "ชามซุป" (ลาดลงอย่างเดียว)</text>
+  <line x1="40" y1="200" x2="330" y2="200" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 50 60 Q 185 260 320 60" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="185" cy="161" r="6" fill="#16a34a"/>
+  <text x="185" y="146" text-anchor="middle" font-size="11.5" fill="#15803d" font-weight="bold">ต่ำสุดเดียว = Global แน่นอน</text>
+  <text x="510" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">Non-convex — "แผงไข่ / หลุมพราง"</text>
+  <line x1="365" y1="200" x2="660" y2="200" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 375 75 C 400 165 420 165 445 75 C 462 145 478 145 495 75 C 515 190 545 190 570 75 C 585 150 600 150 615 75" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="487" cy="116" r="5" fill="#f59e0b"/><circle cx="531" cy="163" r="6" fill="#16a34a"/>
+  <text x="487" y="100" text-anchor="middle" font-size="11" fill="#b45309">Local (กับดัก)</text>
+  <text x="531" y="147" text-anchor="middle" font-size="11" fill="#15803d" font-weight="bold">Global</text>
+  <text x="350" y="222" text-anchor="middle" font-size="12" fill="#475569">หลายหลุม → อัลกอริทึมลงเขาติดกับดักได้ ต้องใช้เทคนิคพิเศษ</text>
+</svg>
+<figcaption>ภาพที่ 2.1 — ฟังก์ชันคอนเวกซ์เหมือนชามซุป (โค้งขึ้นตลอด มีก้นเดียว) vs ไม่คอนเวกซ์เหมือนแผงไข่ (หลุมเล็กใหญ่ปนกัน)</figcaption></figure>
+<div class="warn"><span class="t">⚠️ กับดัก</span> "คอนเวกซ์" ไม่ใช่แค่ "โค้ง" — ต้องโค้ง<b>ขึ้นตลอดทั้งกราฟ</b> (ชาม) ถ้ามีส่วนโค้งลง (โดม/ภูเขา) แม้แต่ช่วงเดียว = ไม่คอนเวกซ์ทันที</div>
+
+<h3 class="sec" id="s22">2.2 เซตคอนเวกซ์ (Convex Set) และผลรวมคอนเวกซ์ (Convex Combination)</h3>
+<p><b>สัญชาตญาณ:</b> เซตคอนเวกซ์ = รูปทรง "ไม่มีรอยบุ๋ม" — เอายางรัดมาคลุมแล้วแนบสนิททั้งรูป (วงกลม, สี่เหลี่ยม = คอนเวกซ์ / รูปดาว, โดนัท = ไม่คอนเวกซ์ เพราะมีบุ๋มหรือรูตรงกลาง)</p>
+<div class="formula">$$\text{เซต } C \text{ คอนเวกซ์} \iff \forall\, x_1, x_2 \in C,\ \forall\, \theta \in [0,1]:\ \theta x_1 + (1-\theta)x_2 \in C$$<span class="note">"ลากเส้นตรงระหว่างสองจุดในเซต เส้นนั้นต้องอยู่ในเซตทั้งเส้น ไม่หลุดออกนอกรูป"</span></div>
+<table class="tbl"><tr><th style="width:24%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$\theta$ ("ธีต้า")</td><td>สัดส่วนการผสม ค่าระหว่าง 0 ถึง 1: θ = 1 → ได้ $x_1$ เป๊ะ, θ = 0 → ได้ $x_2$ เป๊ะ, θ = 0.5 → กึ่งกลางพอดี — นึกว่า "ปริมาณน้ำผสมน้ำหวาน"</td></tr>
+<tr><td>$\theta x_1 + (1-\theta)x_2$</td><td>"จุดบนเส้นเชื่อม" ระหว่าง $x_1$ กับ $x_2$ — การเฉลี่ยถ่วงน้ำหนัก 2 จุด (น้ำหนักรวม = 1 พอดี)</td></tr>
+<tr><td>$\in$ ("เป็นสมาชิกของ")</td><td>"อยู่ใน" — จุดที่ผสมแล้วต้องยังอยู่ในเซต ไม่หลุดออกนอกรูป</td></tr>
+<tr><td>$\forall$ ("สำหรับทุก")</td><td>"ทุกกรณี" — เงื่อนไขต้องจริงกับจุดคู่ใดก็ได้ในเซต ไม่ใช่แค่บางคู่</td></tr>
+<tr><td>$\iff$ ("ก็ต่อเมื่อ")</td><td>สองข้างจริงพร้อมกันเสมอ — อ่านย้อนไปย้อนมาได้</td></tr></table>
+<div class="def"><b class="tag">Convex combination (ผลรวมคอนเวกซ์):</b> การผสมหลายจุด: $\sum_i \theta_i x_i$ เมื่อ $\theta_i \ge 0$ ทุกตัว และ $\sum_i \theta_i = 1$ — คือเวอร์ชัน "หลายจุด" ของการหาจุดบนเส้นเชื่อม (น้ำหนักห้ามติดลบ และรวมกันได้ 1 เท่านั้น) — สัญลักษณ์ $\sum$ ("ซิกมา") แปลว่า "บวกกันทั้งชุด"</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.2 — คำนวณจุดผสม + ตรวจเซตคอนเวกซ์</span>
+<b>(a) คำนวณจุดผสม:</b> ให้ $x_1 = (2, 1)$, $x_2 = (6, 5)$, θ = 0.25 — จุดผสม z อยู่ที่ไหน?<br>
+• แทนสูตร: $z = 0.25\,x_1 + 0.75\,x_2$ (สังเกต: น้ำหนักตัวที่สอง = 1 − 0.25 = 0.75)<br>
+• พิกัดแกนแรก: $0.25 \times 2 + 0.75 \times 6 = 0.5 + 4.5 = 5$<br>
+• พิกัดแกนสอง: $0.25 \times 1 + 0.75 \times 5 = 0.25 + 3.75 = 4$<br>
+• สรุป: $z = (5, 4)$ — อยู่บนเส้นเชื่อมจาก $x_1$ ไป $x_2$ (เพราะ θ = 0.25 ใกล้ $x_2$ z เลยอยู่ใกล้ $x_2$)<br>
+<b>(b) ตรวจว่ารูปทรงคอนเวกซ์ไหม:</b> โดนัท (วงแหวน) — เลือกจุด 2 จุดบนขอบฝั่งตรงข้ามกัน ลากเส้นตรง → เส้นทะลุผ่าน "รูตรงกลาง" ซึ่งไม่ใช่สมาชิกเซต → <b>ไม่คอนเวกซ์</b> ✓</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> โจทย์ให้รูปทรงแล้วถาม "คอนเวกซ์ไหม?" → วิธีตายตัว: เลือกจุดสองจุดที่ <b>สงสัยที่สุด</b> (ริมบุ๋ม ขอบรู) ลากเส้นตรง ถ้าเส้นหลุดออกนอกรูปแม้คู่เดียว → <b>ไม่คอนเวกซ์</b>ทันที (หา 1 คู่ที่พังก็พอ ไม่ต้องเช็คทุกคู่)</div>
+
+<h3 class="sec" id="s23">2.3 ฟังก์ชันคอนเวกซ์ (Convex Function) และการทดสอบด้วยคอร์ด (Chord Test)</h3>
+<p><b>สัญชาตญาณ:</b> วางไม้คาขอบชามซุปสองจุด (ไม้แท่งนั้น = <b>chord / คอร์ด</b>) — ไม้ต้องไม่จมใต้ผิวซุปเด็ดขาด ถ้าผิวซุปโผล่ทะลุเหนือไม้ตรงไหน = ไม่คอนเวกซ์ ทันที</p>
+<div class="formula">$$f\big(\theta x_1 + (1-\theta)x_2\big) \;\le\; \theta f(x_1) + (1-\theta) f(x_2)$$<span class="note">"ผสมจุดก่อนแล้ววัด ≤ วัดก่อนแล้วผสม" — กราฟต้องอยู่ใต้เส้นคอร์ดเสมอ</span></div>
+<table class="tbl"><tr><th style="width:36%">ฝั่งของอสมการ</th><th>หมายความว่าอะไร</th></tr>
+<tr><td>ซ้าย: $f(\theta x_1 + (1-\theta)x_2)$</td><td>"ผสมจุดก่อนแล้ววัด" — เดินไปยืนที่จุดกลางบนเส้นเชื่อม แล้วดูความสูงกราฟจริง ณ จุดนั้น</td></tr>
+<tr><td>ขวา: $\theta f(x_1) + (1-\theta)f(x_2)$</td><td>"วัดก่อนแล้วผสม" — ความสูงของเส้นคอร์ด (ไม้) ตรงแนวเดียวกัน</td></tr></table>
+<figure class="fig">
+<svg viewBox="0 0 400 250">
+  <line x1="25" y1="215" x2="380" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 40 50 Q 180 300 320 50" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <line x1="96" y1="130" x2="278" y2="114" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="96" cy="130" r="5" fill="#dc2626"/><circle cx="278" cy="114" r="5" fill="#dc2626"/>
+  <circle cx="187" cy="175" r="5" fill="#16a34a"/>
+  <line x1="187" y1="122" x2="187" y2="175" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="96" y="118" text-anchor="middle" font-size="11" fill="#b91c1c">จุดบนกราฟ x₁</text>
+  <text x="285" y="102" text-anchor="middle" font-size="11" fill="#b91c1c">จุดบนกราฟ x₂</text>
+  <text x="120" y="98" font-size="11" fill="#b91c1c">เส้นคอร์ด (ไม้)</text>
+  <text x="199" y="138" font-size="11" fill="#64748b">ค่าของคอร์ด (วัดก่อน ผสมทีหลัง)</text>
+  <text x="199" y="192" font-size="11" font-weight="bold" fill="#15803d">ค่ากราฟที่จุดผสม — ต่ำกว่าคอร์ด ✓</text>
+  <text x="200" y="238" text-anchor="middle" font-size="12" fill="#475569">คอร์ดทุกเส้นลอยเหนือกราฟ = คอนเวกซ์ (ผิวซุปไม่ทะลุไม้)</text>
+</svg>
+<figcaption>ภาพที่ 2.2 — Chord Test: เส้นเชื่อมสองจุดบนกราฟต้องอยู่ "เหนือ" กราฟเสมอ</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.3 — ใช้ Chord Test ทั้งของ "คอนเวกซ์" และ "ไม่คอนเวกซ์"</span>
+<b>(a) ทดสอบ $f(x) = x^2$ ที่ $x_1 = 1$, $x_2 = 3$, θ = 0.5:</b><br>
+• ฝั่งซ้าย (ผสมจุดก่อน): จุดผสม = $0.5(1) + 0.5(3) = 2$ → $f(2) = 4$<br>
+• ฝั่งขวา (วัดก่อนแล้วผสม): $0.5 f(1) + 0.5 f(3) = 0.5(1) + 0.5(9) = 5$<br>
+• เทียบ: $4 \le 5$ ✓ → ผ่าน → <b>คอนเวกซ์</b><br>
+<b>(b) ทดสอบ $f(x) = \sqrt{x}$ (รากที่สอง) ที่ $x_1 = 0$, $x_2 = 4$, θ = 0.5:</b><br>
+• ฝั่งซ้าย: จุดผสม = 2 → $f(2) = \sqrt{2} \approx 1.414$<br>
+• ฝั่งขวา: $0.5(0) + 0.5(2) = 1$<br>
+• เทียบ: $1.414 \le 1$? <b>เท็จ!</b> → กราฟโผล่เหนือไม้ → <b>ไม่คอนเวกซ์</b> (จริงๆ มัน concave — คอนเคฟ: โค้งลงแบบโดม)</div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก — ทิศของอสมการ</span> $f(\text{ผสม}) \le \text{ผสมของ} f$ = <b>คอนเวกซ์</b> (ชาม) ถ้าโจทย์เขียนกลับเป็น $\ge$ นั่นคือ <b>concave (คอนเคฟ — โค้งลงแบบโดม)</b> อย่าตอบสลับ! ตัวอย่างคู่ตรงข้ามที่เจอบ่อย: $\log x$ เป็น concave / $-\log x$ จึงคอนเวกซ์</div>
+
+<h3 class="sec" id="s24">2.4 อีพิกราฟ (Epigraph)</h3>
+<p><b>สัญชาตญาณ:</b> หยิบกราฟ f ขึ้นมาแล้ว "เทสี" ทับทุกพื้นที่ที่อยู่ "บนหรือเหนือ" กราฟลงไป — พื้นที่ที่ถูกเททั้งหมด = epi f ("epi" มาจากภาษากรีกแปลว่า "เหนือ")</p>
+<div class="formula">$$\text{epi}\, f = \{(x, t) : f(x) \le t\}$$</div>
+<table class="tbl"><tr><th style="width:22%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$\{(x,t) : \dots\}$</td><td>"เซตของจุด $(x,t)$ ทั้งหมดที่เงื่อนไขขวาจริง" — ปีกกาคือ "รวมทุกจุดที่ผ่านเกณฑ์"</td></tr>
+<tr><td>$t$ ("ที")</td><td>พิกัดความสูง — นึกว่า "ปักธง" ที่ความสูง t เหนือตำแหน่ง x ถ้าธง "ไม่จมใต้กราฟ" (t ≥ f(x)) จุดนั้นอยู่ใน epi f</td></tr>
+<tr><td>epi f ("อีพิ-เอฟ")</td><td>ภูมิภาคเหนือกราฟทั้งหมด — จุด $(x, t)$ หนึ่งจุด = "ยืนที่แกนนอนตำแหน่ง x และแกนตั้งสูง t"</td></tr></table>
+<div class="key"><b class="tag">ทฤษฎีบทสะพานเชื่อม (ออกสอบ!):</b> $f$ เป็นฟังก์ชันคอนเวกซ์ $\iff$ epi $f$ เป็น<b>เซต</b>คอนเวกซ์ — แปลคุณสมบัติ "ฟังก์ชัน" ให้เป็นคุณสมบัติ "เซต" (จำสั้นๆ: "ชามซุป → ปริมาตรเหนือชามเป็นทรงนูนไม่มีบุ๋ม") — ทำให้ solver (โซลเวอร์: โปรแกรมแก้ปัญหา) ใช้เรขาคณิตของเซตจัดการได้</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.4 — จุดไหนอยู่ใน epi f?</span>
+<b>โจทย์:</b> $f(x) = x^2$ — จุด $(3, 8)$ และ $(3, 9.5)$ จุดไหนอยู่ใน epi f?<br>
+<b>วิธี:</b> แทนค่าเงื่อนไข $f(x) \le t$ ทีละจุด<br>
+• จุด $(3, 8)$: $f(3) = 9$ → เช็ค $9 \le 8$? <b>เท็จ</b> → ธงสูง 8 "จมใต้กราฟ" (กราฟสูง 9) → ไม่อยู่ใน epi f<br>
+• จุด $(3, 9.5)$: $f(3) = 9$ → เช็ค $9 \le 9.5$? <b>จริง</b> → ธงลอยเหนือกราฟ → อยู่ใน epi f ✓<br>
+<b>ข้อสังเกต:</b> จุดตัดกับกราฟพอดี เช่น $(3, 9)$: $9 \le 9$ จริง (มีเครื่องหมายเท่ากับ) → อยู่ใน epi f ด้วย</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "จงแสดงว่า f คอนเวกซ์โดยพิจารณา epi f" → ขั้นตอน: หยิบจุดสองจุดใน epi f (คือ $(x_1,t_1)$ ที่ $t_1 \ge f(x_1)$ ฯลฯ) → ผสมด้วย θ → ใช้นิยามความคอนเวกซ์ของ f ชี้ว่าจุดผสมก็ยัง $f(x) \le t$ อยู่ → จบ</div>
+
+<h3 class="sec" id="s25">2.5 การตรวจสอบความคอนเวกซ์: เงื่อนไขอันดับ 1 และอันดับ 2</h3>
+<h4 class="mini">อันดับ 1 — ระนาบสัมผัสอยู่ใต้กราฟเสมอ (First-order Condition — เฟิร์สต์ ออร์เดอร์ คอนดิชัน)</h4>
+<div class="formula">$$f(x_2) \;\ge\; f(x_1) + \nabla f(x_1)^\top (x_2 - x_1) \quad \text{สำหรับทุก } x_1, x_2$$<span class="note">ฝั่งขวา = ค่าที่ "ระนาบสัมผัส" (tangent plane) พยากรณ์ — กราฟจริงต้องสูงกว่าหรือเท่ากันเสมอ</span></div>
+<table class="tbl"><tr><th style="width:28%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$\nabla f(x_1)$ ("เกรเดียนต์ เอฟ")</td><td>เวกเตอร์ "ความชัน" ของกราฟที่จุด $x_1$ — บอกว่าถ้าก้าวเล็กๆ ไปทางไหน f จะขึ้น/ลงแค่ไหน (บทที่ 4 จะเจาะลึก — ตอนนี้รู้แค่ว่ามันคือ "ความชันหลายมิติ" ก็พอ)</td></tr>
+<tr><td>$(x_2 - x_1)$</td><td>เวกเตอร์ "ทิศทางเดิน" จากจุด $x_1$ ไปจุด $x_2$ (ลบกัน = ชี้จากหลังไปหน้า)</td></tr>
+<tr><td>$\nabla f(x_1)^\top(x_2-x_1)$</td><td>ผลคูณจุด (dot product — ด็อท โปรดัคต์: คูณสองเวกเตอร์ได้ตัวเลขเดียว) = "ความชัน × ระยะเดิน" = การประมาณค่า f ด้วยเส้นตรง เหมือนสูตร $a + b \cdot \Delta x$ ที่คุ้นเคย</td></tr></table>
+<p><b>สัญชาตญาณ:</b> แตะแผ่นกระดานแบนที่จุดใดจุดหนึ่งของชามซุป — แผ่นจะวางพาด "ใต้" ชามทั้งใบเสมอ ไม่มีทางตัดทะลุชาม ถ้าแผ่นสัมผัสโผล่เหนือกราฟจุดไหน = ไม่คอนเวกซ์</p>
+<figure class="fig">
+<svg viewBox="0 0 400 250">
+  <line x1="25" y1="215" x2="380" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 45 55 Q 180 290 315 55" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <line x1="30" y1="40" x2="200" y2="254" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <circle cx="112" cy="143" r="5" fill="#f59e0b"/>
+  <text x="52" y="36" font-size="11.5" fill="#b45309" font-weight="bold">เส้นสัมผัส (tangent)</text>
+  <text x="112" y="130" text-anchor="middle" font-size="11" fill="#b45309">จุดสัมผัส x₁</text>
+  <text x="240" y="120" font-size="11.5" fill="#15803d" font-weight="bold">กราฟทุกจุดสูงกว่าเส้นสัมผัส ✓</text>
+  <text x="200" y="238" text-anchor="middle" font-size="12" fill="#475569">เส้นสัมผัสที่จุดใดก็ได้ ต้องอยู่ใต้กราฟเสมอ = เงื่อนไขอันดับ 1</text>
+</svg>
+<figcaption>ภาพที่ 2.3 — เงื่อนไขอันดับ 1: ระนาบ/เส้นสัมผัสวางใต้ชามทั้งใบเสมอ</figcaption></figure>
+<h4 class="mini">อันดับ 2 — เมทริกซ์เฮสเซียนกึ่งบวกแน่นอน (Second-order Condition)</h4>
+<div class="formula">$$f \text{ คอนเวกซ์} \iff \nabla^2 f(x) \succeq 0 \quad \text{ทุกจุด } x$$</div>
+<table class="tbl"><tr><th style="width:28%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$\nabla^2 f$ ("เกรเดียนต์สอง / เฮสเซียน")</td><td>เมทริกซ์ของอนุพันธ์อันดับสอง = <b>เครื่องวัดความโค้ง</b> — ใน 1 มิติมันคือ $f''$ (อนุพันธ์สอง) ธรรมดา; ช่องทแยง = ความโค้งรายแกน, ช่องนอกทแยง = ความโค้งไขว้ระหว่างแกน</td></tr>
+<tr><td>$\succeq 0$ ("กึ่งบวกแน่นอน", PSD)</td><td>"โค้งขึ้นในทุกทิศทาง" — ไม่มีทิศไหนที่ความโค้งติดลบ; ตรวจได้ด้วย $v^\top H v \ge 0$ ทุกเวกเตอร์ $v$ หรือดู eigenvalue ทุกตัว $\ge 0$</td></tr>
+<tr><td>$v^\top H v$ ("วี ทรานสโพส เอช วี")</td><td>ความโค้งที่วัดได้เมื่อ "เดินไปทิศ v" — สรุปทั้งทิศให้เหลือตัวเลขเดียว: ≥ 0 = โค้งขึ้น, < 0 = โค้งลง (มีบุ๋ม!)</td></tr>
+<tr><td>eigenvalue ("ไอเกนวาลู — ค่าเอกเทศ")</td><td>ความโค้งตาม "แกนหลัก" ของเมทริกซ์ — ถ้าทุกตัวไม่ติดลบ = โค้งขึ้นทุกแกน = ชามจริง</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.5 — ตรวจความคอนเวกซ์ด้วยเฮสเซียน (ทีละบรรทัด เหมือนครูนั่งข้างๆ)</span>
+<b>โจทย์:</b> $f(x, y) = x^2 + 2xy + 2y^2$ คอนเวกซ์หรือไม่?<br>
+<b>ขั้น 1 — หาอนุพันธ์ย่อยอันดับ 1</b> (partial derivative — พาร์เชียล: หาความชันโดยถือตัวแปรอื่นนิ่ง): $\dfrac{\partial f}{\partial x} = 2x + 2y$, $\dfrac{\partial f}{\partial y} = 2x + 4y$<br>
+<b>ขั้น 2 — หาเฮสเซียน</b> (อนุพันธ์อีกที แล้วจัดเป็นเมทริกซ์ 2×2): $\nabla^2 f = \begin{bmatrix} 2 & 2 \\ 2 & 4 \end{bmatrix}$<br>
+<b>ขั้น 3 — หา eigenvalues:</b> ใช้สูตร $\lambda^2 - (\text{ผลรวมทแยง})\lambda + (\text{ดีเทอร์มิแนนต์}) = 0$<br>
+• ผลรวมทแยง (trace) = $2 + 4 = 6$ / ดีเทอร์มิแนนต์ (det) = $(2)(4) - (2)(2) = 4$<br>
+• สมการ: $\lambda^2 - 6\lambda + 4 = 0$ → $\lambda = \dfrac{6 \pm \sqrt{36 - 16}}{2} = \dfrac{6 \pm \sqrt{20}}{2}$<br>
+• $\lambda_1 \approx 5.24$ และ $\lambda_2 \approx 0.76$ — <b>ทั้งคู่เป็นบวก</b><br>
+<b>ขั้น 4 — สรุป:</b> eigenvalues ≥ 0 ทุกตัว → $\nabla^2 f \succeq 0$ → <b>คอนเวกซ์ ✓</b> (โครงเรื่องคือ: ชัน → โค้ง → เช็คว่าโค้งไม่ลงในทิศใดเลย)<br>
+<b>(เทียบกับ 1 มิติเพื่อความเข้าใจ:)</b> $f(x)=x^3$: $f''(x) = 6x$ — ที่ x < 0 ค่าติดลบ (โค้งลง) → ไม่คอนเวกซ์บน $\mathbb{R}$ ทั้งโดเมน</div>
+<div class="warn"><span class="t">⚠️ ตัวอย่างโดนหลอก (จำให้ขึ้นใจ)</span> $f(x,y) = x^2 - y^2$: เฮสเซียน $= \begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}$ → eigenvalue −2 < 0 → <b>ไม่คอนเวกซ์</b> (ผิวอานม้า: โค้งลงทาง y แต่โค้งขึ้นทาง x) — และกับดักคลาสสิกอีกอย่าง: $f'' \ge 0$ <b>ที่จุดเดียว</b>ไม่พอ! ต้อง PSD <b>ทุกจุด</b>ในโดเมน</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> โจทย์ "พิสูจน์/ตรวจความคอนเวกซ์" → เลือกแผน: <b>(ก)</b> หาเฮสเซียน → ชี้ PSD (ดีสุดกับฟังก์ชันกำลังสอง/พอลิโนเมียล) <b>(ข)</b> ใช้ composition rules หัวข้อถัดไป (ดีสุดกับ exp/log/max)</div>
+
+<h3 class="sec" id="s26">2.6 กฎการประกอบฟังก์ชัน (Composition Rules — คอมโพซิชัน รูลส์) ที่ใช้จริง</h3>
+<p>แทนที่จะคำนวณเฮสเซียนทุกครั้ง เรา "ต่อเลโก้" — ประกอบฟังก์ชันคอนเวกซ์จากชิ้นส่วนสำเร็จรูป ตามกฎที่พิสูจน์ไว้แล้ว:</p>
+<table class="tbl"><tr><th style="width:52%">กฎ (เงื่อนไข)</th><th>ตัวอย่างที่ใช้ได้ทันที</th></tr>
+<tr><td>ผลรวมถ่วงน้ำหนัก (น้ำหนัก ≥ 0) ของฟังก์ชันคอนเวกซ์ → คอนเวกซ์</td><td>$f(x) = x^2 + 3e^x$ ✓</td></tr>
+<tr><td>ฟังก์ชันแอฟฟิน $a^\top x + b$ → คอนเวกซ์ (และ concave พร้อมกัน)</td><td>$2x + 1$, $3x - 2y + 5$ ✓</td></tr>
+<tr><td>$g$ คอนเวกซ์ → $g(Ax + b)$ คอนเวกซ์ (ยัดแอฟฟินเข้าหน้า)</td><td>$\|Ax + b\|$ ✓</td></tr>
+<tr><td>$g$ คอนเวกซ์ + $h$ คอนเวกซ์<b>และไม่ลด</b> (nondecreasing) → $h(g(x))$ คอนเวกซ์</td><td>$e^{x^2}$ (ชั้นใน $x^2$ คอนเวกซ์, exp คอนเวกซ์และไม่ลด) ✓</td></tr>
+<tr><td>$g$ concave + $h$ คอนเวกซ์<b>และไม่เพิ่ม</b> (nonincreasing) → $h(g(x))$ คอนเวกซ์</td><td>$-\log x$ ($\log$ concave แล้วเติมลบ) ✓</td></tr>
+<tr><td>max ของฟังก์ชันคอนเวกซ์หลายตัว → คอนเวกซ์</td><td>$\max(x^2, e^x)$ ✓</td></tr>
+<tr><td>Norm (นอร์ม — ฟังก์ชันวัดความยาว) ใดๆ $\|\cdot\|$ → คอนเวกซ์</td><td>$\|x\|_2$, $\|x\|_1$ ✓</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.6 — แยกชั้นแล้วอ้างกฎ (เร็วกว่าคิดเฮสเซียนมาก)</span>
+<b>โจทย์:</b> $f(x) = e^{x^2}$ คอนเวกซ์ไหม?<br>
+<b>ขั้น 1 — แยกชั้นใน/ชั้นนอก:</b> ชั้นใน $g(x) = x^2$ / ชั้นนอก $h(u) = e^u$<br>
+<b>ขั้น 2 — เช็คชั้นใน:</b> $g'' = 2 \ge 0$ → คอนเวกซ์ ✓<br>
+<b>ขั้น 3 — เช็คชั้นนอก:</b> $h'' = e^u > 0$ → คอนเวกซ์ ✓ และ $h$ "ไม่ลด" (exp โตขึ้นเสมอ) ✓<br>
+<b>ขั้น 4 — อ้างกฎ:</b> "ชั้นในคอนเวกซ์ + ชั้นนอกคอนเวกซ์และไม่ลด" → $e^{x^2}$ <b>คอนเวกซ์ ✓</b> (จบโดยไม่ต้องจิ้มเฮสเซียน)<br>
+<b>(ตัวอย่างที่กฎใช้ไม่ได้:)</b> $f(x) = e^{-x^2}$ — ชั้นใน $-x^2$ <b>ไม่คอนเวกซ์</b> (โค้งลง) → กฎพัง ห้ามอ้าง (และจริงๆ ฟังก์ชันนี้ไม่คอนเวกซ์ — มันเป็น "กระดิ่ง" โค้งลงที่กลาง)</div>
+<div class="warn"><span class="t">⚠️ กับดัก</span> เงื่อนไข "nondecreasing/nonincreasing" ไม่ใช่ของแต่ง ต้องเช็คครบ 3 อย่างทุกครั้ง: <b>ชั้นใน → ชั้นนอก → ทิศ monotone (โมโนโทน: เพิ่ม/ลดทางเดียว)</b> — ข้ามข้อใดข้อหนึ่ง = อ้างกฎผิด = ตกข้อสอบ</div>
+
+<h3 class="sec" id="s27">2.7 รูปแบบมาตรฐานของปัญหาคอนเวกซ์ (3 เงื่อนไข — ออกสอบแน่นอน)</h3>
+<div class="formula">$$\min_x\ f_0(x) \quad \text{subject to} \quad f_i(x) \le 0,\ i = 1,\dots,m \qquad h_j(x) = 0,\ j = 1,\dots,p$$</div>
+<table class="tbl"><tr><th style="width:26%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$f_0$ ("เอฟ-ซีโร่")</td><td>Objective — สิ่งที่ต้องการ "ทำให้ต่ำสุด" (เช่น ต้นทุน, ความผิดพลาด)</td></tr>
+<tr><td>$f_i(x) \le 0$</td><td>ข้อจำกัดแบบอสมการ (inequality constraint) — "กำแพง" ที่คำตอบห้ามล้ำ เขียนมาตรฐานให้อยู่รูป ≤ 0 เสมอ</td></tr>
+<tr><td>$h_j(x) = 0$</td><td>ข้อจำกัดแบบสมการ (equality constraint) — "ราง" ที่คำตอบต้องวิ่งตามเป๊ะๆ</td></tr>
+<tr><td>subject to ("ซับเจ็กต์ ทู" — s.t.)</td><td>"โดยมีเงื่อนไขว่า" — คำตอบต้องผ่านข้อจำกัดทุกข้อจึงนับเป็น feasible (ทำได้จริง)</td></tr>
+<tr><td>$i = 1,\dots,m$ / $j = 1,\dots,p$</td><td>มีข้อจำกัดแบบอสมการ m ข้อ และแบบสมการ p ข้อ (ตัวเลขนับเริ่มจาก 1 ถึง m และ 1 ถึง p)</td></tr></table>
+<div class="def"><b class="tag">ปัญหาเป็น "ปัญหาคอนเวกซ์" ก็ต่อเมื่อครบ 3 เงื่อนไข (จำเป็น!):</b><br>
+<b>1.</b> $f_0$ (objective) เป็นฟังก์ชันคอนเวกซ์<br>
+<b>2.</b> $f_i$ ทุกตัว (ข้อจำกัดแบบอสมการในรูป $f_i(x) \le 0$) เป็นฟังก์ชันคอนเวกซ์<br>
+<b>3.</b> $h_j$ ทุกตัว (ข้อจำกัดแบบสมการ) เป็น<b>แอฟฟินเท่านั้น</b> ($h_j(x) = a^\top x + b$ — เชิงเส้นบวกค่าคงที่)</div>
+<p><b>ทำไม $h_j$ ต้องแอฟฟิน "เท่านั้น" (ฟังก์ชันโค้งก็มี = 0 ได้นี่?):</b> เพราะเซตของคำตอบที่ทำให้ฟังก์ชันโค้งเท่ากับศูนย์ มักไม่คอนเวกซ์ — ตัวอย่าง: $x^2 - 1 = 0$ มีคำตอบแค่ $\{1, -1\}$ สองจุดโดดๆ ลากเส้นจาก −1 ไป 1 ต้องผ่านจุด 0 (ซึ่งผิดเงื่อนไข) → เซตคำตอบไม่คอนเวกซ์ ระบบพังทันที ส่วนแอฟฟิน $a^\top x + b = 0$ ให้เส้นตรง/ระนาบ ซึ่งคอนเวกซ์เสมอ</p>
+<p><b>ทำไม 3 เงื่อนไขนี้ทำให้พื้นที่คำตอบที่ผ่าน (feasible set) คอนเวกซ์:</b> เซต $\{f_i \le 0\}$ = พื้นที่ "ใต้" ฟังก์ชันคอนเวกซ์ → คอนเวกซ์ / เซต $\{h_j = 0\}$ แอฟฟิน = เส้นตรง/ระนาบ → คอนเวกซ์ / และ <b>จุดตัด (intersection — อินเทอร์เซกชัน: ส่วนที่ซ้อนกัน) ของเซตคอนเวกซ์ = คอนเวกซ์เสมอ</b></p>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.7 — จัดรูปปัญหาเข้ามาตรฐาน + ตรวจ 3 เงื่อนไข</span>
+<b>โจทย์:</b> $\min\ x^2 + y^2$ เมื่อ $x + y \ge 2$ — เป็นปัญหาคอนเวกซ์ไหม?<br>
+<b>ขั้น 1 — จัดข้อจำกัดให้อยู่รูป ≤ 0:</b> ตอนนี้เป็นหัว $\ge$ (กลับด้าน) → ย้ายข้างแล้วคูณ −1: $-x - y + 2 \le 0$ ✓ (เครื่องหมายพลิกเพราะคูณลบ)<br>
+<b>ขั้น 2 — ตรวจเงื่อนไขที่ 1:</b> $f_0 = x^2 + y^2$ → เฮสเซียน = เมทริกซ์เอกลักษณ์ (diag 2,2) → PSD ✓ คอนเวกซ์<br>
+<b>ขั้น 3 — ตรวจเงื่อนไขที่ 2:</b> $f_1 = -x - y + 2$ เป็นแอฟฟิน → แอฟฟินคอนเวกซ์อัตโนมัติ ✓<br>
+<b>ขั้น 4 — ตรวจเงื่อนไขที่ 3:</b> ไม่มีข้อจำกัดแบบสมการ → ผ่านโดยดีฟอลต์ ✓<br>
+<b>สรุป:</b> ครบ 3 เงื่อนไข → เป็นปัญหาคอนเวกซ์ → local ที่เจอ = global ทันที<br>
+<b>(ตัวอย่างที่ไม่ผ่าน:)</b> ถ้าข้อจำกัดเป็น $x^2 + y^2 = 1$ (วงกลม) — แบบสมการแต่ "ไม่แอฟฟิน" → ไม่ใช่ปัญหาคอนเวกซ์ตามรูปแบบ (คำตอบบนวงกลมไม่ใช่เซตคอนเวกซ์)</div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> (1) ข้อจำกัดแบบ<b>สมการ</b>ที่ไม่แอฟฟิน เช่น $x^2 = 1$ — ห้ามใช้เด็ดขาด แม้ดู "เรียบร้อย" (2) อสมการ $\ge$ ต้องคูณ −1 ให้เป็น $\le 0$ ก่อนแล้วเช็คฝั่งที่เหลือ — หลายคนลืมคูณลบ เลยตัดสินความคอนเวกซ์ผิดทิศ</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "จัดให้อยู่ในรูปมาตรฐาน / ปัญหานี้คอนเวกซ์หรือไม่" → ขั้นตอนตายตัว 4 ขั้น: ย้ายข้างให้เป็น $\dots \le 0$ → เช็ค $f_0$ คอนเวกซ์ → เช็ค $f_i$ คอนเวกซ์ → เช็ค $h_j$ แอฟฟินเท่านั้น → สรุปทีละข้อ</div>
+
+<h3 class="sec" id="s28">2.8 ทฤษฎีบทหลัก: Local Optimum = Global Optimum</h3>
+<div class="def"><b class="tag">ทฤษฎีบท:</b> ในปัญหาคอนเวกซ์ local minimum ทุกจุดคือ global minimum — "หลุมที่ต่ำสุดในย่านตัวเอง = หลุมต่ำสุดของทั้งประเทศ" (นี่คือเหตุผลที่คอนเวกซ์คือโลกอุดมคติ)</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.8 — พิสูจน์ด้วยการขัดแย้ง (reductio ad absurdum) ทีละบรรทัด</span>
+<b>แนวคิด:</b> สมมติว่าทฤษฎีบทผิด → ไล่ตรรกะจนได้สิ่งที่ขัดแย้งกับนิยาม → แสดงว่าสมมติฐานผิด<br>
+<b>สมมติ:</b> $x_{local}$ เป็น local minimum แต่มีจุดที่ดีกว่า $x_b$ อยู่ไกลๆ โดย $f(x_b) < f(x_{local})$<br>
+<b>ขั้น 1:</b> สร้างจุดผสม $z = (1-\theta)x_{local} + \theta x_b$ โดยให้ θ เล็กมาก (เช่น 0.01) → z คือ "ก้าวเล็กๆ" จาก $x_{local}$ ไปทาง $x_b$ → z อยู่ในย่านใกล้เคียงของ local พอดี<br>
+<b>ขั้น 2:</b> feasible set คอนเวกซ์ → เส้นเชื่อมอยู่ในเซต → z ยัง feasible ✓<br>
+<b>ขั้น 3:</b> ใช้ความคอนเวกซ์ของ f: $f(z) \le (1-\theta)f(x_{local}) + \theta f(x_b)$ — แล้วเพราะ $f(x_b) < f(x_{local})$ การเฉลี่ยเข้ามาเลยทำให้ $f(z) < f(x_{local})$ (เหมือนเฉลี่ยคะแนน 80 กับ 90 ต้องได้ระหว่าง 80–90 แต่น้ำหนักไปทางต่ำกว่า)<br>
+<b>ขั้น 4:</b> เราได้จุด z "ในย่านเดียวกัน" ที่ต่ำกว่า $x_{local}$ → <b>ขัดแย้ง</b>กับนิยาม local minimum! → สมมติฐานผิด → ไม่มีจุดที่ดีกว่าอยู่ที่ใดเลย → $x_{local}$ คือ global □ (สี่เหลี่ยม = จบการพิสูจน์)</div>
+<p><b>ทำไมทฤษฎีบทนี้ยอดเยี่ยม:</b> มันเปลี่ยนคำถามที่ตอบไม่ได้ ("จุดนี้ดีที่สุดในจักรวาลไหม? — ต้องมองทั้งประเทศ!") ให้เหลือคำถามง่าย ("จุดนี้ดีที่สุดแถวนี้ไหม? — มองแค่รอบตัว") — อัลกอริทึมลงเขาอะไรก็ได้ที่หา local เจอ = ได้ global ทันที นี่คือเหตุผลที่ Gradient Descent (บทที่ 4) มั่นใจได้บนปัญหาคอนเวกซ์</p>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เห็นประโยค "ปัญหานี้เป็นคอนเวกซ์ ดังนั้น …" → ตอบ 2 ประโยค: (1) local optimum ใดๆ = global optimum (2) อัลกอริทึมเชิงเกรเดียนต์จึงรับประกันว่าเจอคำตอบดีที่สุด ไม่มีกับดักหลุมพราง</div>
+
+<h3 class="sec" id="s29">2.9 เงื่อนไขความเหมาะที่สุดเมื่อมีข้อจำกัด (Optimality with Constraints)</h3>
+<ul class="tight">
+<li><b>ไม่มีข้อจำกัด:</b> จุดเหมาะสุดต้อง $\nabla f(x^*) = 0$ — "จุดราบ" ความชันเป็นศูนย์ทุกทิศ (ยืนก้นหุบแล้วลาดไม่ลงทั้งซ้ายขวา)</li>
+<li><b>มีข้อจำกัด:</b> จุดดีที่สุดอาจอยู่ "ติดกำแพง" — อยากเดินลงต่อแต่ข้อจำกัดกั้นไว้ เลยหยุดแนบกำแพง</li>
+</ul>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 2.9 — เหมือนกันแต่ต่างกัน เพียงเพราะมี "กำแพง"</span>
+<b>โจทย์:</b> $\min\ x^2$ เมื่อ $x \ge 1$<br>
+<b>(a) ลองแบบไม่มีข้อจำกัดก่อน:</b> $\nabla f = 2x = 0 \Rightarrow x^* = 0$ — แต่ $0 < 1$ <b>ละเมิดข้อจำกัด!</b> ใช้ไม่ได้ ทิ้ง<br>
+<b>(b) หาคำตอบที่มีข้อจำกัด:</b> ในโซนที่อนุญาต (x ≥ 1) ฟังก์ชัน $x^2$ ยิ่ง x น้อยยิ่งต่ำ → ดีที่สุดคือ "ต่ำที่สุดเท่าที่กฎอนุญาต" = $x^* = 1$ (แนบกำแพงพอดี) ได้ $f(1) = 1$<br>
+<b>ตรวจด้วยเกรเดียนต์:</b> ที่ x = 1, $\nabla f = 2 \ne 0$ — ชี้ทางลง (ไปทาง x ต่ำกว่า) แต่ทางนั้นเป็น "เขตห้าม" → ยืนแนบกำแพงนี่แหละถูกต้อง<br>
+<b>แนวคิด KKT (เคเคที — เงื่อนไข Karush–Kuhn–Tucker) แบบภาพรวม:</b> ที่จุดเหมาะสุด เกรเดียนต์ของ objective ต้อง "สมดุลกับแรงดันของกำแพง" (เกรเดียนต์ของข้อจำกัดที่แอคทีฟ) — แรงดึงลง = แรงกำแพงดันกลับ และในปัญหาคอนเวกซ์ เงื่อนไข KKT เป็นทั้งจำเป็น<b>และเพียงพอ</b> (เจอจุดที่ KKT อยู่ = เจอ global ทันที)</div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> เห็น optimum ติดขอบข้อจำกัดแล้ว $\nabla f \ne 0$ อย่าตกใจว่า "ผิดทฤษฎี" — เงื่อนไข $\nabla f = 0$ ใช้ได้เฉพาะ "ไม่มีข้อจำกัด" เท่านั้น พอมีกำแพง optimum ติดกำแพงและ $\nabla f$ ไม่จำเป็นต้องเป็นศูนย์</div>
+</section>
+
+<!-- ================= CH 3 ================= -->
+<section class="card chapter" id="ch3">
+<h2 class="chap"><span class="chapnum">3</span>วิธีสุ่มและการค้นหาเฉพาะที่</h2>
+<p class="chapsub">Stochastic and Local Search (สโตแคสติก แอนด์ โลคัล เซิร์ช — การค้นหาแบบมีการสุ่ม และการค้นหาเฉพาะที่) — กลยุทธ์สำหรับปัญหาที่ "ไม่มีอนุพันธ์ให้ใช้"</p>
+
+<table class="tbl"><tr><th style="width:34%">ศัพท์บทที่ 3 (อ่านว่า)</th><th style="width:26%">แปลว่า</th><th>ความหมายในวิชานี้</th></tr>
+<tr><td>Grid search (กริด เซิร์ช)</td><td>การค้นหาแบบตาราง</td><td>วางจุดทดลองเป็นตารางสม่ำเสมอทุกมิติ</td></tr>
+<tr><td>Random search (แรนดอม เซิร์ช)</td><td>การค้นหาแบบสุ่ม</td><td>สุ่มจุดทดลองกระจายทั่วพื้นที่</td></tr>
+<tr><td>Hyperparameter (ไฮเปอร์พารามิเตอร์)</td><td>ค่าตั้งต้นของโมเดล</td><td>ค่าที่เราต้องจูนก่อนเทรน เช่น อัตราการเรียนรู้</td></tr>
+<tr><td>Stochastic (สโตแคสติก)</td><td>มีความสุ่มเข้ามาเกี่ยวข้อง</td><td>อัลกอริทึมที่ผลลัพธ์มีโชคปนอยู่</td></tr>
+<tr><td>Hill climbing (ฮิลล์ ไคลม์บิง)</td><td>การไต่เนิน</td><td>เดินทีละก้าวไปยังจุดที่ดีขึ้นเสมอ</td></tr>
+<tr><td>Acceptance rate (แอ็กเซปแทนซ์ เรต)</td><td>อัตราการยอมรับ</td><td>สัดส่วนก้าวที่เสนอแล้ว "ดีขึ้น" จนถูกรับ</td></tr>
+<tr><td>Step size (สเต็ป ไซซ์)</td><td>ขนาดก้าว</td><td>ระยะที่เดินต่อ 1 ก้าว</td></tr>
+<tr><td>Plateau (แพลโต)</td><td>ที่ราบ</td><td>บริเวณที่ f เท่ากันหมด ไม่มีสัญญาณนำทาง</td></tr>
+<tr><td>Ridge (ริดจ์)</td><td>สันเขา</td><td>หุบเขาที่เอียงเฉียง ต้องเดินทแยงถึงจะลง</td></tr>
+<tr><td>Perturb / kick (เปอร์เทิร์บ / คิก)</td><td>สั่น / เตะ</td><td>ดีดคำตอบออกจากหลุมด้วยการสุ่มแรงๆ หนึ่งครั้ง</td></tr>
+<tr><td>Iterated Local Search — ILS (ไอเทอเรเต็ด โลคัล เซิร์ช)</td><td>การค้นหาเฉพาะที่แบบวนซ้ำ</td><td>เตะออกจากหลุม → ลงเขาใหม่ → จดสถิติ → ทำซ้ำ</td></tr>
+<tr><td>Big Valley Hypothesis (บิ๊ก วัลลีย์ ไฮโพทีซิส)</td><td>สมมติฐานหุบเขาใหญ่</td><td>local ที่ดีมักกระจุกอยู่ใกล้ global</td></tr>
+<tr><td>Independent runs (อินดิเพนเดนต์ รันส์)</td><td>การทดลองอิสระ</td><td>รันซ้ำหลายครั้งที่ผลไม่ส่งผลต่อกัน</td></tr>
+<tr><td>Random seed (แรนดอม ซีด)</td><td>เมล็ดการสุ่ม</td><td>เลขกำหนดลำดับการสุ่ม — เปลี่ยน seed = ได้ลอตใหม่</td></tr>
+<tr><td>Success rate (ซัคเซส เรต)</td><td>อัตราความสำเร็จ</td><td>สัดส่วนรันที่ "เจอคำตอบดีสุด" จากทั้งหมด</td></tr>
+<tr><td>Bimodal / two peaks (ไบโมดัล)</td><td>การแจกแจงสองยอด</td><td>ผลลัพธ์ออกเป็น 2 กลุ่มขั้ว เช่น สำเร็จ vs ติดหลุม</td></tr></table>
+
+<h3 class="sec" id="s31">3.1 เมื่อไม่มีอนุพันธ์ — กลับไป "เดินสำรวจ" ด้วยการเรียก f</h3>
+<p>จากบทที่ 1: ปัญหา black-box (แบล็ก-บ็อกซ์ — กล่องดำ: ใส่คำตอบได้คะแนนออก แต่ไม่รู้สูตรข้างใน) ให้เราทำอะไรไม่ได้นอกจาก <b>(1) เลือกว่าจะลองจุดไหนต่อไป</b> และ <b>(2) ใช้ผลคะแนนที่ได้นำทาง</b> — บทนี้คือคู่มือการเดินสำรวจเมื่อเรา "ตาบอด" ไม่เห็นความชัน มีแต่เทปวัดความสูง (ค่า f) ที่จุดที่ยืนเท่านั้น</p>
+
+<h3 class="sec" id="s32">3.2 Grid Search vs Random Search — ทำไม "การสุ่ม" ชนะในมิติสูง</h3>
+<ul class="tight">
+<li><b>Grid search (กริด เซิร์ช — ค้นแบบตาราง):</b> วางจุดทดลองเป็นตารางช่องสม่ำเสมอทุกมิติ — ดูเรียบร้อยแต่มี 2 ปัญหา: (1) เจอ curse of dimensionality (คำสาปแห่งมิติ — จำนวนจุดโต $10^n$ จากบทที่ 1) และ (2) <b>สิ้นเปลือง</b> เพราะไล่ค่าซ้ำๆ ในมิติที่ "ไม่สำคัญ" โดยไม่จำเป็น</li>
+<li><b>Random search (แรนดอม เซิร์ช — ค้นแบบสุ่ม):</b> สุ่มจุดกระจายไปมา — ด้วยงบจำนวนจุดเท่ากัน แต่ละจุดจะมีค่า <b>ไม่ซ้ำกัน</b> ในทุกมิติ (โอกาสสุ่มซ้ำเป๊ะเกือบเป็นศูนย์) จึง "เจาะ" ค่าหลากหลายได้แม้กระทั่งมิติที่สำคัญ</li>
+</ul>
+<figure class="fig">
+<svg viewBox="0 0 720 280">
+  <text x="140" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">Grid Search (25 จุด)</text>
+  <rect x="20" y="40" width="240" height="210" fill="#fff" stroke="#cbd5e1" rx="6"/>
+  <rect x="120" y="40" width="50" height="210" fill="#22c55e" opacity="0.18"/>
+  <text x="145" y="34" text-anchor="middle" font-size="10.5" fill="#15803d" font-weight="bold">แกนสำคัญ (เช่น learning rate)</text>
+  <g fill="#3b82f6">
+    <circle cx="45" cy="65" r="3.5"/><circle cx="45" cy="110" r="3.5"/><circle cx="45" cy="155" r="3.5"/><circle cx="45" cy="200" r="3.5"/><circle cx="45" cy="235" r="3.5"/>
+    <circle cx="95" cy="65" r="3.5"/><circle cx="95" cy="110" r="3.5"/><circle cx="95" cy="155" r="3.5"/><circle cx="95" cy="200" r="3.5"/><circle cx="95" cy="235" r="3.5"/>
+    <circle cx="145" cy="65" r="3.5"/><circle cx="145" cy="110" r="3.5"/><circle cx="145" cy="155" r="3.5"/><circle cx="145" cy="200" r="3.5"/><circle cx="145" cy="235" r="3.5"/>
+    <circle cx="195" cy="65" r="3.5"/><circle cx="195" cy="110" r="3.5"/><circle cx="195" cy="155" r="3.5"/><circle cx="195" cy="200" r="3.5"/><circle cx="195" cy="235" r="3.5"/>
+    <circle cx="245" cy="65" r="3.5"/><circle cx="245" cy="110" r="3.5"/><circle cx="245" cy="155" r="3.5"/><circle cx="245" cy="200" r="3.5"/><circle cx="245" cy="235" r="3.5"/>
+  </g>
+  <text x="140" y="268" text-anchor="middle" font-size="11.5" fill="#475569">ในแถบสำคัญ: ได้ค่า "ต่างกัน" แค่ 5 ค่า</text>
+  <text x="510" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">Random Search (25 จุด)</text>
+  <rect x="390" y="40" width="240" height="210" fill="#fff" stroke="#cbd5e1" rx="6"/>
+  <rect x="490" y="40" width="50" height="210" fill="#22c55e" opacity="0.18"/>
+  <text x="515" y="34" text-anchor="middle" font-size="10.5" fill="#15803d" font-weight="bold">แกนสำคัญ (เช่น learning rate)</text>
+  <g fill="#f59e0b">
+    <circle cx="402" cy="65" r="3.5"/><circle cx="421" cy="150" r="3.5"/><circle cx="412" cy="215" r="3.5"/><circle cx="430" cy="98" r="3.5"/>
+    <circle cx="392" cy="180" r="3.5"/><circle cx="450" cy="60" r="3.5"/><circle cx="461" cy="128" r="3.5"/><circle cx="473" cy="228" r="3.5"/>
+    <circle cx="480" cy="82" r="3.5"/><circle cx="455" cy="196" r="3.5"/><circle cx="494" cy="50" r="3.5"/><circle cx="508" cy="142" r="3.5"/>
+    <circle cx="516" cy="205" r="3.5"/><circle cx="500" cy="100" r="3.5"/><circle cx="526" cy="170" r="3.5"/><circle cx="532" cy="230" r="3.5"/>
+    <circle cx="544" cy="88" r="3.5"/><circle cx="552" cy="160" r="3.5"/><circle cx="561" cy="55" r="3.5"/><circle cx="569" cy="192" r="3.5"/>
+    <circle cx="577" cy="122" r="3.5"/><circle cx="588" cy="218" r="3.5"/><circle cx="597" cy="78" r="3.5"/><circle cx="607" cy="152" r="3.5"/><circle cx="615" cy="105" r="3.5"/>
+  </g>
+  <text x="510" y="268" text-anchor="middle" font-size="11.5" fill="#475569">ในแถบสำคัญ: ได้ค่า "ต่างกัน" 6+ ค่า แถมกระจายทั่ว</text>
+  <text x="360" y="278" text-anchor="middle" font-size="12" fill="#475569">งบ 25 จุดเท่ากัน — แต่ random ได้ค่าไม่ซ้ำในแกนสำคัญมากกว่า (จุดฟ้าซ้ำกันเป็นแถว จุดส้มไม่ซ้ำเลย)</text>
+</svg>
+<figcaption>ภาพที่ 3.1 — เมื่อมีเพียงบางมิติที่สำคัญต่อค่า f: grid เผาจุดไปกับการไล่ซ้ำในมิติไม่สำคัญ ขณะที่ random ได้ค่าหลากหลายในมิติสำคัญมากกว่า</figcaption></figure>
+<div class="def"><b class="tag">ข้อค้นพบ Bergstra & Bengio (เบิร์กสตรา แอนด์ เบนจิโอ — งานวิจัยปี 2012):</b> ปัญหาจูน hyperparameter จริงใน Machine Learning มักมี <b>ไม่กี่มิติที่สำคัญจริงๆ</b> — ด้วยงบเท่ากัน random search เจอโซนคำตอบดีได้ดีกว่า grid เพราะได้ค่าไม่ซ้ำหลากหลายในมิติสำคัญ และยังขนานกันได้ง่าย (แต่ละจุดทดลองไม่ต้องรอผลกัน)</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.2 — นับ "การทดลองที่มีคุณค่า" ของทั้งสองวิธี</span>
+<b>โจทย์:</b> งบ 25 การทดลอง มี 2 ไฮเปอร์พารามิเตอร์ คือ (learning rate — เลิร์นนิง เรต: อัตราการเรียนรู้, batch size — แบตช์ ไซซ์: ขนาดชุดข้อมูลต่อรอบ) ปรากฏว่า <b>ผลลัพธ์ขึ้นกับ learning rate เป็นหลัก ส่วน batch size ตั้งเท่าไหร่ผลแทบไม่ต่าง</b><br>
+<b>(a) ถ้าใช้ Grid 5×5 (ตาราง 5 ค่า × 5 ค่า):</b><br>
+• learning rate ถูกไล่แค่ <b>5 ค่า</b> เท่านั้น (เช่น 0.001, 0.01, 0.1, 1, 10) — แต่ละค่าถูกทดซ้ำ 5 ครั้ง (คู่กับ batch 5 ค่า)<br>
+• การทดลองที่ "ให้ข้อมูลใหม่จริงๆ" = แค่ 5 จาก 25 → <b>เสียงบ 80% ไปกับความซ้ำซาก</b><br>
+<b>(b) ถ้าใช้ Random 25 จุด:</b><br>
+• learning rate ถูกสุ่มได้ <b>25 ค่าแทบไม่ซ้ำกันเลย</b> (เช่น 0.0037, 0.0512, 0.23, …) → การทดลองมีคุณค่าทั้ง 25<br>
+<b>สรุป:</b> งบเท่ากัน แต่ random สำรวจ "5 เท่า" ของค่าที่แตกต่างในมิติสำคัญ → โอกาสเจอโซนดีมากกว่า — นี่คือเหตุผลที่ Bergstra & Bengio สรุปว่า random ชนะในมิติสูง</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> คำถาม "ทำไม random search ชนะ grid ด้วยงบเท่ากัน" → ตอบ 3 ข้อ: (1) ได้ค่าตัวอย่างที่ไม่ซ้ำมากกว่าต่อมิติ (2) โดยเฉพาะเมื่อมีเพียงบางมิติสำคัญจริง (Bergstra & Bengio) (3) ทำงานขนานได้ง่าย — ห้ามตอบแค่ "สุ่มแล้วดูเหมือนครอบคลุมกว่า" ต้องมีเหตุผลเรื่อง "ค่าซ้ำในมิติไม่สำคัญ"</div>
+
+<h3 class="sec" id="s33">3.3 Stochastic Hill Climbing (สโตแคสติก ฮิลล์ ไคลม์บิง — การไต่เนินแบบสุ่ม)</h3>
+<p><b>สัญชาตญาณ:</b> ปีนเขากลางหมอกหนา — คุณรู้แค่ความสูง "จุดที่ยืนอยู่" เท่านั้น (เพราะกลางหมอกมองไม่เห็นรอบตัว) จึงทำได้แค่ "เหยียบลอง" ทิศสุ่มหนึ่งก้าว ถ้าจุดใหม่ "ต่ำกว่า" (ดีกว่า) ก็ย้ายไป ถ้าแย่กว่าก็ถอยกลับมายืนเดิม แล้วเหยียบลองใหม่ — ทำซ้ำจนหมดงบ</p>
+<pre class="code">x = จุดสุ่มเริ่มต้นใน S
+while ยังเหลือ budget (จำนวนเรียก f):
+    x' = x + ก้าวสุ่ม            <span class="c"># สุ่มทั้งทิศทางและระยะ</span>
+    if f(x') &lt; f(x):            <span class="c"># กฎยอมรับ: ดีขึ้นเท่านั้น!</span>
+        x = x'                  <span class="c"># ยอมรับ → ย้ายไปยืนจุดใหม่</span>
+    <span class="c"># ถ้าแย่ลงหรือเท่าเดิม → ปฏิเสธ อยู่ที่เดิม แล้วสุ่มก้าวใหม่</span>
+return จุดที่ดีที่สุดเท่าที่เคยเจอ</pre>
+<div class="def"><b class="tag">กฎการยอมรับ "เฉพาะคำตอบที่ดีขึ้น" (accept only if better):</b> อัลกอริทึมนี้เป็น <b>pure exploitation (พิวร์ เอ็กซ์พลอยเทชัน — เก็บเกี่ยวจากสิ่งที่รู้อยู่แล้วเท่านั้น)</b> — ข้อดี: ค่า f ที่ตัวเองยืน "ไม่มีวันแย่ลง" ข้อเสียร้ายแรง: เมื่อยืนบน local optimum (หลุมที่เพื่อนบ้านรอบๆ แย่กว่าหมด) จะ <b>ติดตรงนั้นตลอดกาล</b> เพราะทุกก้าวที่จะพาออกจากหลุมต้อง "แย่ลงชั่วคราว" ซึ่งกฎห้าม!</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.3 — เดิน Hill Climbing จริงทีละก้าว (เห็นตอน "ติด" เลย)</span>
+<b>โจทย์:</b> ภูมิประเทศ 1 มิติ 11 จุด (ตำแหน่ง 0–10) ค่า f เรียงดังนี้ (ต่ำ = ดี):<br>
+[10, 7, 5, <b>4</b>, 6, 3, 2, <b>1</b>, 3, 5, 9] — local min ที่ตำแหน่ง 3 (ค่า 4) และ 7 (ค่า 1 = global), ก้าวสุ่ม = ±1 จากการโยนเหรียญ<br>
+<b>ทดลองที่ 1 — เริ่มที่ตำแหน่ง 1 (ค่า 7):</b><br>
+• ก้าว 1: เสนอ 2 (ค่า 5) → 5 < 7 <b>รับ</b> → ยืนที่ 2<br>
+• ก้าว 2: เสนอ 3 (ค่า 4) → 4 < 5 <b>รับ</b> → ยืนที่ 3<br>
+• ก้าว 3: เสนอ 4 (ค่า 6) → 6 > 4 <b>ปฏิเสธ</b> / ก้าว 4: เสนอ 2 (ค่า 5) → ปฏิเสธ / ก้าว 5: เสนอ 4 → ปฏิเสธ …<br>
+→ <b>ติดตรงตำแหน่ง 3 (ค่า 4) ตลอดกาล</b> ทั้งที่ global คือตำแหน่ง 7 (ค่า 1) — เพราะทุกทางออกจากหลุมต้อง "ขึ้นเขา" ซึ่งถูกกฎห้าม<br>
+<b>ทดลองที่ 2 — เริ่มที่ตำแหน่ง 9 (ค่า 5):</b> เสนอ 8 (ค่า 3) รับ → เสนอ 7 (ค่า 1) รับ → เจอ global!<br>
+<b>บทเรียน:</b> ผลลัพธ์ขึ้นกับ "จุดเริ่มต้น" โดยตรง → นี่คือเหตุผลที่ต้องมี Random Restarts (หัวข้อ 1.8) และ ILS (หัวข้อ 3.6) มาช่วย</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "ยอมรับเฉพาะก้าวที่ดีขึ้น / reject any worse move" → ตอบ <b>Stochastic Hill Climbing</b> และข้อสรุปที่ต้องพ่วงมาด้วยเสมอ: <b>"จึงติด local optimum ได้ (cannot escape local optima)"</b> — ข้อสอบชอบถามต่อว่า "แล้วเกิดอะไรขึ้น" อย่าลืมตอบครึ่งหลัง!</div>
+
+<h3 class="sec" id="s34">3.4 ผลของขนาดก้าว (Step Size) และสัญญาณอัตราการยอมรับ 20–50%</h3>
+<p><b>สัญชาตญาณ:</b> เดินลงหุบเขา — ก้าวสั้นเกิน = คุ้ยไปทีละเซนติเมตร ไม่มีวันถึงก้น ก้าวยาวเกิน = ก้าวทีละกิโลเมตร ข้ามหลุมไปตกอีกฟากเสมอ — ปัญหาคือเรา "มองไม่เห็น" ว่าก้าวเราเหมาะไหม … แต่จริงๆ เรามี <b>สายวัดฟรี</b> คือนับว่า "ก้าวที่เสนอไป กี่ก้าวที่ดีขึ้นจนถูกรับ"</p>
+<div class="def"><b class="tag">อัตราการยอมรับ (Acceptance rate):</b> = (จำนวนก้าวที่ถูกยอมรับ) ÷ (จำนวนก้าวที่เสนอทั้งหมด) — เช่น เสนอ 100 ก้าว รับ 30 = 30% — เป็น "สัญญาณฟรี" ที่บอกความเหมาะของขนาดก้าวโดยไม่ต้องรู้สูตร f</div>
+<table class="tbl"><tr><th>อาการ</th><th>Acceptance rate</th><th>เกิดอะไรขึ้น</th><th>วิธีแก้</th></tr>
+<tr><td>ก้าวเล็กเกิน</td><td>สูงกว่า 50%</td><td>แทบทุกก้าวดีขึ้น (เพราะแค่ขยับนิดเดียวย่อมไม่แย่ลง) แต่คืบแบบหนอน เผางบไปกับก้าวจิ๋ว</td><td>ขยายขนาดก้าว</td></tr>
+<tr><td>ก้าวใหญ่เกิน</td><td>ต่ำกว่า 20%</td><td>ก้าวส่วนใหญ่กระโดดข้ามหลุมไปตกจุดแย่กว่า → โดนปฏิเสธเป็นส่วนใหญ่ แทบไม่ขยับ</td><td>หดขนาดก้าว</td></tr>
+<tr><td><b>ก้าวพอดี</b></td><td><b>20–50%</b></td><td>กำลังก้าวผ่านระยะที่ "มีประโยชน์" พอดี — ได้ทั้งความก้าวหน้าและความแม่นยำ</td><td>คงไว้ / จูนต่อเนื่อง</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.4 — อ่านสัญญาณแล้วสั่งแก้ (โจทย์คำนวณแบบนี้ออกแน่)</span>
+<b>โจทย์ (a):</b> อัลกอริทึมเสนอก้าว 1,000 ครั้ง ถูกยอมรับ 850 ครั้ง — สรุปและสั่งแก้?<br>
+• อัตราการยอมรับ = 850 ÷ 1,000 = <b>85%</b><br>
+• 85% > 50% → <b>ก้าวเล็กเกินไป</b> → สั่ง: <b>เพิ่มขนาดก้าว</b><br>
+<b>โจทย์ (b):</b> เสนอ 1,000 ครั้ง รับ 90 ครั้ง<br>
+• = 90 ÷ 1,000 = <b>9%</b> < 20% → <b>ก้าวใหญ่เกินไป</b> (ส่วนใหญ่กระโดดพลาด) → สั่ง: <b>ลดขนาดก้าว</b><br>
+<b>โจทย์ (c):</b> เสนอ 1,000 ครั้ง รับ 350 ครั้ง<br>
+• = 350 ÷ 1,000 = <b>35%</b> → อยู่ในโซน 20–50% → <b>ขนาดก้าวกำลังดี คงไว้</b><br>
+<b>กฎปรับอัตโนมัติที่ใช้จริง:</b> ถ้า rate > 50% → คูณขนาดก้าวด้วย 2 / ถ้า rate < 20% → หารด้วย 2 — ปรับไปเรื่อยๆ จนเข้าโซน</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอตัวเลข "เสนอ N ก้าว รับ M ก้าว" → คิด M/N เทียบกับ 20–50% ทันที: > 50% = ก้าวเล็กเกิน (เพิ่ม step size) / < 20% = ก้าวใหญ่เกิน (ลด step size) / 20–50% = พอดี — จำช่วงตัวเลขนี้ให้ขึ้นใจ เป็นโจทย์โปรดของผู้ออกสอบ</div>
+
+<h3 class="sec" id="s35">3.5 ปัญหาการติดกับดักเฉพาะที่ (Local Traps — โลคัล แทร็ปส์)</h3>
+<ul class="tight">
+<li><b>Local optimum (หลุมตื้น):</b> ล้อมรอบด้วยที่สูง — กฎ "รับเฉพาะดีขึ้น" ทำให้หนีไม่พ้น (เห็นแล้วในตัวอย่าง 3.3)</li>
+<li><b>Plateau (แพลโต — ที่ราบ):</b> เพื่อนบ้านรอบๆ มีค่า f <b>เท่ากันหมด</b> — ไม่มีสัญญาณบอกทิศเลย เพราะ "ไม่ดีขึ้น = ไม่ถูกยอมรับ" จึงเหมือนยืนกลางทะเลทรายราบเป็นแป้ง หมุนไปหมุนมาก็อยู่ที่เดิม</li>
+<li><b>Ridge (ริดจ์ — สันเขาเฉียง):</b> หุบเขาที่วิ่งเฉียง (ทแยง) ระหว่างแกน — ก้าวตรงตามแกน x หรือ y กลับ "ขึ้นเขา" ทั้งคู่ มีแต่ก้าวทแยงเท่านั้นที่ลง ถ้าอัลกอริทึมเสนอก้าวตามแกนอย่างเดียว จะติดตรงสันตลอด</li>
+</ul>
+<figure class="fig">
+<svg viewBox="0 0 620 200">
+  <line x1="20" y1="170" x2="600" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 30 55 C 60 150 85 158 105 150 C 125 142 132 120 152 122 C 170 124 180 138 198 134 C 230 128 248 92 280 90 C 315 88 330 168 360 170 C 395 172 410 96 440 92 C 470 88 486 128 510 126 C 540 124 556 70 575 60" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="152" cy="122" r="7" fill="#ef4444"/>
+  <circle cx="360" cy="170" r="7" fill="#16a34a"/>
+  <text x="152" y="104" text-anchor="middle" font-size="11" fill="#b91c1c" font-weight="bold">ติด Local (หลุมตื้น)</text>
+  <line x1="170" y1="126" x2="240" y2="128" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aR)"/>
+  <text x="205" y="112" text-anchor="middle" font-size="10.5" fill="#b91c1c">ขึ้นเขา = ถูกปฏิเสธ ✗</text>
+  <text x="360" y="150" text-anchor="middle" font-size="11" fill="#15803d" font-weight="bold">Global (หลุมลึก) — อยู่ห่างออกไป</text>
+  <text x="310" y="192" text-anchor="middle" font-size="12" fill="#475569">กฎ "ยอมรับเฉพาะที่ดีขึ้น" ทำให้ลูกบอลแดงหนีหลุมไม่ได้ — ต้องใช้กลยุทธ์หัวข้อถัดไป</text>
+</svg>
+<figcaption>ภาพที่ 3.2 — กับดักเฉพาะที่: Hill Climbing ติดหลุมตื้นและขึ้นเขาไม่ได้เลยตามกฎ</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.5 — เห็นกับดัก Ridge ด้วยตัวเลขจริง</span>
+<b>โจทย์:</b> $f(x, y) = (x-y)^2 + 0.1(x+y)^2$ — หุบเขานี้วิ่งเฉียงตามเส้น y = x (ลองแทนดู: จุดไหนที่ x = y จะได้ f เล็กมาก) — กำลังยืนที่ (3, −3) และอนุญาตให้ก้าวได้ทีละ 1 ตามแกน x หรือ y เท่านั้น<br>
+<b>ค่า ณ จุดปัจจุบัน:</b> $f(3,-3) = (3-(-3))^2 + 0.1(3+(-3))^2 = 6^2 + 0.1(0)^2 = 36 + 0 = 36$<br>
+<b>ลองก้าวตามแกน:</b><br>
+• ก้าว x ไป (4, −3): $(4+3)^2 + 0.1(4-3)^2 = 49 + 0.1 = 49.1$ → แย่ลง (49.1 > 36) <b>ปฏิเสธ ✗</b><br>
+• ก้าว y ไป (3, −4): $(3+4)^2 + 0.1(3-4)^2 = 49 + 0.1 = 49.1$ → แย่ลง <b>ปฏิเสธ ✗</b><br>
+• ก้าว x กลับ (2, −3): $(2+3)^2 + 0.1(-1)^2 = 25.1$ → แย่ลง ✗ / ก้าว y กลับ (3, −2): $(5)^2 + 0.1(1)^2 = 25.1$ → ✗<br>
+<b>ลองก้าวทแยง (2, −2):</b> $(2-(-2))^2 + 0.1(2+(-2))^2 = 4^2 + 0 = 16$ → <b>ดีขึ้นมาก! รับ ✓</b><br>
+<b>สรุป:</b> ก้าวตามแกนทั้ง 4 ทิศพาแย่ลงหมด มีแต่ก้าวทแยงเท่านั้นที่ลงหุบ — Hill Climbing ที่เสนอก้าวตามแกนจะ "ติดสันเขา" ไม่รู้จบ</div>
+
+<h3 class="sec" id="s36">3.6 Iterated Local Search (ILS) vs Random Restarts — กับ Big Valley Hypothesis</h3>
+<p>เมื่อติดกับดักเฉพาะที่แล้ว มี 2 ยุทธศาสตร์หลักในการ "หนี":</p>
+<ul class="tight">
+<li><b>Random Restarts (แรนดอม รีสตาร์ท — เริ่มใหม่แบบสุ่ม):</b> โยนทุกอย่างทิ้ง เริ่มสุ่มจุดใหม่จากศูนย์ — เหมือนยกเลิกเกมแล้วเปิดเกมใหม่เลย</li>
+<li><b>Iterated Local Search — ILS (ไอเทอเรเต็ด โลคัล เซิร์ช — ค้นเฉพาะที่แบบวนซ้ำ):</b> จากคำตอบที่ติด local → <b>เตะ (perturb/kick — เปอร์เทิร์บ: สั่น/ดีด)</b> ออกจากหลุมแรงพอควร → ให้ local search วิ่งต่อ → จดค่าดีที่สุด → เตะซ้ำอีก — เหมือนเด้งลูกบอลขึ้นจากหลุมพอให้กลิ้งไปหลุมอื่น แต่ไม่ทิ้งแผนที่เดิม</li>
+</ul>
+<div class="def"><b class="tag">Big Valley Hypothesis (สมมติฐานหุบเขาใหญ่):</b> ในปัญหาจริงจำนวนมาก local optimum ที่ "ดี" มัก<b>กระจุกอยู่ใกล้ๆ กัน</b> ในหุบเขาใหญ่รอบ global optimum — ถ้าสมมติฐานนี้จริง การเริ่มจากคำตอบดีเดิมแล้วเตะนิดๆ (ILS) ดีกว่าเริ่มสุ่มใหม่หมด เพราะเรายืนอยู่ใน "ย่านที่ดีทั้งย่าน" อยู่แล้ว การโยนทิ้ง = ทิ้งข้อมูลล้ำค่า</div>
+<figure class="fig">
+<svg viewBox="0 0 720 210">
+  <text x="180" y="24" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#16a34a">Big Valley — local ดีๆ กระจุกใกล้กัน</text>
+  <line x1="25" y1="175" x2="335" y2="175" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 35 45 C 70 130 105 150 140 145 C 175 140 200 115 235 112 C 270 110 300 132 320 145 C 300 120 290 90 270 78 C 250 66 220 62 195 70 C 175 76 160 88 152 100 C 148 90 138 80 122 76 C 105 72 85 78 72 92 C 60 104 52 118 48 130" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="195" cy="70" r="6" fill="#16a34a"/><text x="195" y="58" text-anchor="middle" font-size="10.5" fill="#15803d" font-weight="bold">Global</text>
+  <circle cx="152" cy="100" r="4.5" fill="#f59e0b"/><circle cx="122" cy="76" r="4.5" fill="#f59e0b"/><circle cx="72" cy="92" r="4.5" fill="#f59e0b"/><circle cx="48" cy="130" r="4.5" fill="#f59e0b"/>
+  <text x="180" y="194" text-anchor="middle" font-size="11" fill="#475569">ILS เตะจาก local หนึ่ง → มักไปเจอ local ดีอีกตัวใกล้ๆ ทันที</text>
+  <text x="540" y="24" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">ภูมิประเทศสุ่ม — คำตอบดีกระจัดกระจาย</text>
+  <line x1="385" y1="175" x2="695" y2="175" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 395 50 C 415 130 435 135 455 118 C 472 104 482 128 502 90 C 520 58 540 140 562 120 C 580 104 592 132 612 84 C 628 48 645 138 665 115 C 678 100 688 118 692 128" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="502" cy="90" r="4.5" fill="#f59e0b"/><circle cx="455" cy="118" r="4.5" fill="#f59e0b"/><circle cx="562" cy="120" r="4.5" fill="#f59e0b"/><circle cx="612" cy="84" r="4.5" fill="#16a34a"/><circle cx="665" cy="115" r="4.5" fill="#f59e0b"/>
+  <text x="540" y="194" text-anchor="middle" font-size="11" fill="#475569">ไม่มีโครงสร้าง Big Valley → เริ่มใหม่แบบสุ่ม (Restarts) คุ้มกว่า</text>
+</svg>
+<figcaption>ภาพที่ 3.3 — ทางเลือก ILS vs Restarts ขึ้นกับ "โครงสร้าง" ของภูมิประเทศ</figcaption></figure>
+<table class="tbl"><tr><th>ประเด็น</th><th>Random Restarts</th><th>Iterated Local Search (ILS)</th></tr>
+<tr><td>เริ่มจากไหน</td><td>จุดสุ่มใหม่ล้วนๆ ทุกรอบ</td><td>คำตอบดีเดิม + kick แรงพอควร</td></tr>
+<tr><td>ข้อมูลเก่า</td><td>ทิ้งหมด</td><td>เก็บไว้ใช้ (เชื่อ Big Valley)</td></tr>
+<tr><td>เหมาะกับภูมิประเทศแบบ</td><td>สุ่ม ไม่มีโครงสร้าง</td><td>มีหุบเขาใหญ่ คำตอบดีกระจุกกัน</td></tr>
+<tr><td>ความเสี่ยง</td><td>เปลืองงบ เริ่มจากศูนย์เสมอ</td><td>kick เบาไป = กลับหลุมเดิม / แรงไป = กลายเป็น restart ใหม่เปล่าๆ</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.6 — แข่ง ILS กับ Restarts บนภูมิประเทศเดียวกัน</span>
+<b>โจทย์:</b> ภูมิประเทศมี local optimum ที่ตำแหน่ง A(2) ค่า f=8, B(5) ค่า f=4, C(9) ค่า f=1 (global) — สังเกตว่า B และ C อยู่ "ใกล้" A (Big Valley)<br>
+<b>วิธี Restarts (งบ 3 รอบ):</b><br>
+• รอบ 1: สุ่มเจอ → ลงหลุม A (f=8) / รอบ 2: สุ่มใหม่ → หลุม D(12) ค่า f=6 / รอบ 3: สุ่มใหม่ → หลุม B (f=4)<br>
+• ดีที่สุด = f 4 (ยังไม่เจอ global!) — เพราะแต่ละรอบ "ลืม" ความรู้รอบก่อน<br>
+<b>วิธี ILS (งบเท่ากัน):</b><br>
+• เริ่มได้ A (f=8) → เตะไปตำแหน่ง 4 (ใกล้ B!) → local search → เจอ B (f=4) <b>ดีขึ้น จดสถิติ</b><br>
+• เตะจาก B ไปตำแหน่ง 7 (ใกล้ C!) → local search → เจอ C (f=1) <b>= global!</b><br>
+<b>สรุป:</b> ILS ชนะเพราะ "เตะแบบมีทิศ" — จาก local ที่ดี การเตะเบาๆ มักไปตกแถวๆ local ดีตัวอื่น (สอดคล้อง Big Valley) ขณะที่ restart โยนเต๋าใหม่ทั้งลูก</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "คำตอบที่ดีมักอยู่ใกล้กัน / มีหุบเขาใหญ่ / Big Valley" → เลือก <b>ILS</b> — เจอ "ภูมิประเทศสุ่ม ไม่มีโครงสร้าง" → เลือก <b>Random Restarts</b> — และถามถึง kick strength (ความแรงเตะ) ให้ตอบ: เบาไป = กลับหลุมเดิม แรงไป = เท่ากับ restart ใหม่ ต้อง "แรงพอดี"</div>
+
+<h3 class="sec" id="s37">3.7 การออกแบบการทดลองและการรายงานผลเชิงสถิติ</h3>
+<p>อัลกอริทึมแบบสุ่มมี "โชค" เข้ามาเกี่ยวข้อง — รันครั้งเดียวแล้วชนะ ไม่พิสูจน์อะไรเลย (อาจแค่โชคดี) การเปรียบเทียบที่น่าเชื่อถือต้องมีหลัก 4 ข้อ:</p>
+<ol class="tight">
+<li><b>รันอิสระ ≥ 30 ครั้ง (independent runs — การทดลองอิสระ):</b> แต่ละรันใช้ random seed (เมล็ดการสุ่ม) ต่างกัน — หนึ่งรัน = ตัวอย่างหนึ่งชิ้น ต้องมีตัวอย่างพอหลายชิ้นถึงจะสรุปได้ (เลข 30 มาจากหลักสถิติว่าประมาณนี้ค่าเฉลี่ยเริ่มเสถียร)</li>
+<li><b>งบเท่ากัน (equal budget):</b> ทุกอัลกอริทึมได้เรียก f จำนวนครั้งเท่ากันพอดี (budget จากหัวข้อ 1.6) — เทียบคนวิ่งระยะไม่เท่ากัน = ไม่มีความหมาย</li>
+<li><b>รายงาน Success rate (อัตราความสำเร็จ) เมื่อการแจกแจงเป็น 2 ยอด:</b> ถ้าผลลัพธ์ออกมาเป็น 2 กลุ่มขั้ว (เช่น เจอคำตอบสุดยอด vs ติดหลุมแย่) ค่าเฉลี่ย (mean — มีน) จะ <b>หลอกเรา</b> เพราะมันเป็นตัวเลข "หัวหักหาง" ที่ไม่ตรงกับผลจริงของรันใดเลย — ต้องรายงานสัดส่วนรันที่สำเร็จแทน (หรือรายงานควบคู่กัน)</li>
+<li><b>รายงานครบชุด:</b> ไม่ใช่แค่ค่าเฉลี่ย ให้รายงาน best / worst / median (มีเดียน — ค่ากลาง) หรือกล่องกระจาย (box plot) เพื่อให้เห็น "ความกระจาย" ของผล</li>
+</ol>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 3.7 — เห็นตอนที่ "ค่าเฉลี่ยหลอกเรา" (โจทย์คลาสสิก!)</span>
+<b>โจทย์:</b> แข่งอัลกอริทึม A กับ B บนปัญหาที่คำตอบสมบูรณ์แบบคือ f = 0 (แสดงผลเป็นตาราง 10 รันเพื่อความง่ายในการคำนวณ — ของจริงต้อง ≥ 30):<br>
+• A: [0, 0, 0, 0, 0, 0, 0, 0, 0, <b>100</b>] (สำเร็จ 9 รัน ติดหลุมแย่ 1 รัน)<br>
+• B: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8] (ได้ค่ากลางๆ ทุกรัน)<br>
+<b>คำนวณค่าเฉลี่ย (mean):</b><br>
+• ค่าเฉลี่ย A = (0+0+…+0+100) ÷ 10 = 100 ÷ 10 = <b>10</b><br>
+• ค่าเฉลี่ย B = 80 ÷ 10 = <b>8</b><br>
+<b>อ่านผลแบบผิวเผิน:</b> 8 < 10 → "B ดีกว่า A" ← <b>นี่คือหลอกลวง!</b><br>
+<b>คำนวณ Success rate (เกณฑ์สำเร็จ: f ≤ 1):</b><br>
+• A: สำเร็จ 9 จาก 10 = <b>90%</b> / B: สำเร็จ 0 จาก 10 = <b>0%</b><br>
+<b>อ่านผลที่ถูกต้อง:</b> การแจกแจงของ A เป็น <b>2 ยอด (bimodal)</b> — ก้อนใหญ่ที่ 0 กับก้อนเล็กที่ 100 ค่าเฉลี่ย 10 คือ "หัวหักหาง" ไม่ตรงกับรันจริงแม้แต่รันเดียว ส่วน B มั่นคงแต่ขีดจำกัดต่ำ → ถ้าต้องการ "โอกาสเจอคำตอบสมบูรณ์" เลือก A (90% success) — <b>เมื่อเห็น 2 ยอด ให้รายงาน success rate แทน mean เสมอ</b></div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> (1) เทียบอัลกอริทึมด้วย "เวลา" หรือ "จำนวนรันไม่เท่ากัน" = ไม่แฟร์ — ต้องใช้ <b>budget เท่ากัน</b> (2) ใช้ mean ตัดสินเมื่อผลเป็น 2 ยอด = หลอกตัวเอง — ข้อสอบมักให้ข้อมูลแบบตัวอย่างข้างบน (มีค่า outlier ตัวเดียวดูดค่าเฉลี่ย) แล้วถามว่า "ควรรายงานอะไร" → ตอบ <b>Success rate</b></div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "การเปรียบเทียบที่เป็นธรรม / fair comparison" → ตอบ 3 ชุด: <b>(1) รันอิสระ ≥ 30 ครั้ง (ต่าง seed) (2) budget เท่ากัน (3) ผลเป็น 2 ยอด → รายงาน success rate แทน mean</b></div>
+</section>
+
+<!-- ================= CH 4 ================= -->
+<section class="card chapter" id="ch4">
+<h2 class="chap"><span class="chapnum">4</span>เกรเดียนต์เดสเซนต์</h2>
+<p class="chapsub">Gradient Descent (เกรเดียนต์ ดีเซนต์ — การไหลลงตามความชัน) — หัวใจของการเทรน Machine Learning ทั้งหมด: $x \leftarrow x - \eta\nabla f$</p>
+
+<table class="tbl"><tr><th style="width:34%">ศัพท์บทที่ 4 (อ่านว่า)</th><th style="width:26%">แปลว่า</th><th>ความหมายในวิชานี้</th></tr>
+<tr><td>Derivative (ดีริเวทีฟ)</td><td>อนุพันธ์</td><td>ความชันของกราฟ ณ จุดหนึ่ง</td></tr>
+<tr><td>Partial derivative (พาร์เชียล ดีริเวทีฟ)</td><td>อนุพันธ์ย่อย</td><td>ความชันรายแกน (ถือตัวแปรอื่นนิ่ง)</td></tr>
+<tr><td>Gradient (เกรเดียนต์)</td><td>เวกเตอร์ความชัน</td><td>รวมอนุพันธ์ย่อยทุกแกนมาเป็นเวกเตอร์เดียว</td></tr>
+<tr><td>Steepest descent (สตีพิสต์ ดีเซนต์)</td><td>ทิศลงชันที่สุด</td><td>ทิศที่ทำให้ f ลดเร็วที่สุด = −∇f</td></tr>
+<tr><td>Learning rate η (เลิร์นนิง เรต)</td><td>อัตราการเรียนรู้</td><td>ตัวคูณกำหนดขนาดก้าวแต่ละรอบ</td></tr>
+<tr><td>Convergence (คอนเวอร์เจนซ์)</td><td>การลู่เข้า</td><td>ค่าเข้าใกล้จุดต่ำสุดแล้วนิ่งลง</td></tr>
+<tr><td>Divergence (ไดเวอร์เจนซ์)</td><td>การลู่ออก</td><td>ค่าหนีไกลออกไปเรื่อยๆ บานปลาย</td></tr>
+<tr><td>Analytic (แอนะลิติก)</td><td>เชิงวิเคราะห์</td><td>หาอนุพันธ์จากกฎคณิตศาสตร์โดยตรง</td></tr>
+<tr><td>Automatic differentiation (ออโตเมติก ดิฟเฟอเรนเชียชัน — AD)</td><td>อนุพันธ์อัตโนมัติ</td><td>ให้โปรแกรมจดการคำนวณแล้วคิดอนุพันธ์เป๊ะๆ ให้ (เช่น PyTorch)</td></tr>
+<tr><td>Numerical (นิวเมริคัล)</td><td>เชิงตัวเลข</td><td>ประมาณอนุพันธ์จากค่า f ที่แทนค่าใกล้กัน</td></tr>
+<tr><td>Central difference (เซนทรัล ดิฟเฟอเรนซ์)</td><td>ผลต่างกลาง</td><td>สูตรประมาณอนุพันธ์แบบ "ดูซ้าย-ขวาพร้อมกัน"</td></tr>
+<tr><td>Quadratic (ควอดราติก)</td><td>กำลังสอง</td><td>ฟังก์ชันรูปชามมาตรฐาน เช่น x², xᵀAx</td></tr>
+<tr><td>Contour line (คอนทัวร์ ไลน์)</td><td>เส้นชั้น</td><td>เส้นเชื่อมจุดที่ f เท่ากัน (เหมือนเส้นความสูงบนแผนที่)</td></tr>
+<tr><td>Eigenvalue λ (ไอเกนวาลู)</td><td>ค่าเอกเทศ</td><td>ความโค้งตามแกนหลักของปัญหา</td></tr></table>
+
+<h3 class="sec" id="s41">4.1 อนุพันธ์และเกรเดียนต์ในเชิงเรขาคณิต</h3>
+<p><b>เริ่มจาก 1 มิติ (สัญชาตญาณ):</b> อนุพันธ์ $f'(x)$ คือ <b>ความชัน (slope — สโลป)</b> ของเส้นสัมผัสที่จุด x — ถ้าเดินขวาไปเล็กน้อย (ระยะ $dx$) ค่า f จะเปลี่ยนไปประมาณ $f'(x) \cdot dx$ ชันมาก = ค่า f เปลี่ยนเร็ว, ชันเป็นศูนย์ = ราบ (จุดต่ำสุด/สูงสุด)</p>
+<div class="formula">$$\nabla f = \left( \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n} \right)$$<span class="note">เกรเดียนต์ = รวม "ความชันรายแกน" ทุกแกนมาเรียงเป็นเวกเตอร์เดียว</span></div>
+<table class="tbl"><tr><th style="width:24%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$\nabla$ ("นาบลา / เดล")</td><td>สัญลักษณ์รูปสามเหลี่ยมคว่ำ — แปลว่า "รวมอนุพันธ์ย่อยทุกแกน" เมื่อวางหน้า f จะได้เวกเตอร์ความชัน</td></tr>
+<tr><td>$\partial$ ("พาร์เชียล / ดี รอบ")</td><td>"อนุพันธ์ย่อย" — หาความชันเฉพาะแกนนั้นโดย <b>ถือตัวแปรอื่นนิ่ง</b> เหมือนถามว่า "ถ้าขยับแค่ x, y นิ่งๆ f เปลี่ยนกี่หน่วยต่อ 1 หน่วยของ x?"</td></tr>
+<tr><td>$\nabla f$ ("เกรเดียนต์ เอฟ")</td><td>เวกเตอร์ชี้ไปทางที่ f <b>เพิ่มเร็วที่สุด</b> — ขนาด (ความยาวเวกเตอร์) = ความชันเท่าไหร่ ทิศ = ขึ้นชันทางไหน</td></tr></table>
+<figure class="fig">
+<svg viewBox="0 0 400 250">
+  <line x1="25" y1="215" x2="380" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M 30 40 Q 200 320 370 40" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <line x1="90" y1="128" x2="215" y2="213" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <circle cx="149" cy="167" r="5.5" fill="#f59e0b"/>
+  <line x1="149" y1="167" x2="185" y2="192" stroke="#dc2626" stroke-width="2.5" marker-end="url(#aR)"/>
+  <text x="52" y="120" font-size="11.5" fill="#b45309" font-weight="bold">เส้นสัมผัส (tangent)</text>
+  <text x="149" y="155" text-anchor="middle" font-size="11" fill="#b45309">จุด P</text>
+  <text x="196" y="207" font-size="11.5" fill="#b91c1c" font-weight="bold">ทิศลงชัน −f′(x)</text>
+  <text x="200" y="240" text-anchor="middle" font-size="12" fill="#475569">อนุพันธ์ ณ จุด P = ความชันของเส้นสัมผัส = f′(x) — ลบออก = ทิศลงเขา</text>
+</svg>
+<figcaption>ภาพที่ 4.1 — ใน 1 มิติ: อนุพันธ์คือความชันของเส้นสัมผัส และทิศ −f′(x) คือทิศลงชัน</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.1 — คำนวณเกรเดียนต์ทีละแกน</span>
+<b>โจทย์:</b> $f(x, y) = x^2 + 3y^2$ — หา $\nabla f$ ที่จุด $(1, 2)$<br>
+<b>ขั้น 1 — ชันแกน x (ถือ y นิ่ง):</b> $\dfrac{\partial f}{\partial x} = 2x$ → แทน x = 1 → $\dfrac{\partial f}{\partial x} = 2$<br>
+<b>ขั้น 2 — ชันแกน y (ถือ x นิ่ง):</b> $\dfrac{\partial f}{\partial y} = 6y$ → แทน y = 2 → $\dfrac{\partial f}{\partial y} = 12$<br>
+<b>ขั้น 3 — รวมเป็นเวกเตอร์:</b> $\nabla f(1,2) = (2, 12)$<br>
+<b>อ่านความหมาย:</b> ณ จุดนี้ ถ้าขยับ x ไป 1 หน่วย f เพิ่มราว 2 หน่วย แต่ถ้าขยับ y ไป 1 หน่วย f เพิ่มราว 12 หน่วย → ทิศ y ชันกว่ามาก → เวกเตอร์ (2, 12) เลย "เอียงไปทาง y" เพราะเกรเดียนต์ชี้ไปทางที่ขึ้นชันแรงสุด</div>
+
+<h3 class="sec" id="s42">4.2 ทำไม −∇f จึงเป็นทิศที่ลดค่าเร็วที่สุด (Steepest Descent)</h3>
+<p><b>สัญชาตญาณก่อน:</b> ยืนอยู่ริมเนิน รอบตัวเดินได้ 360 องศา — ทุกทิศ "ชันไม่เท่ากัน" มีทิศหนึ่งที่ขึ้นชันแรงสุด และทิศ <b>ตรงข้ามพอดี</b> คือทิศที่ลงชันแรงสุด — เกรเดียนต์จดจำทิศ "ขึ้นแรงสุด" ไว้ให้เรา แล้วเราแค่กลับหัว (ใส่ลบ) ก็ได้ทิศ "ลงแรงสุด"</p>
+<div class="formula">$$\text{อัตราการเปลี่ยนแปลงของ } f \text{ ในทิศ } u = \nabla f \cdot u = \|\nabla f\| \cos\theta$$<span class="note">θ = มุมระหว่างเกรเดียนต์กับทิศที่เราเดิน — สูตรนี้คือใบเบิกทางของทั้งหัวข้อ</span></div>
+<table class="tbl"><tr><th style="width:26%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$u$ ("ยู")</td><td>เวกเตอร์ "ทิศทางที่เราเลือกเดิน" (ยาว 1 หน่วย — เป็นแค่เข็มทิศ ไม่มีระยะ)</td></tr>
+<tr><td>$\nabla f \cdot u$ ("ด็อท โปรดัคต์")</td><td>ผลคูณจุด = "ความชันที่เจอจริงเมื่อเดินทิศ u" — บวก = ขึ้นเขา, ลบ = ลงเขา, ศูนย์ = ราบตามขวาง</td></tr>
+<tr><td>$\|\nabla f\|$ ("นอร์ม / ขนาดเกรเดียนต์")</td><td>ความยาวของเวกเตอร์เกรเดียนต์ = ความชันแรงสุดเท่าที่มีในจุดนี้</td></tr>
+<tr><td>$\cos\theta$ ("โคไซน์ ธีต้า")</td><td>ตัวคูณลดหลั่นจาก 1 ถึง −1: เดินทางเดียวกับเกรเดียนต์ (θ=0°) ได้เต็ม ๆ / ตั้งฉาก (90°) ได้ 0 / เดินสวน (180°) ได้ลบเต็ม ๆ</td></tr></table>
+<p><b>เหตุผลจบใน 3 บรรทัด:</b> เนื่องจาก $\cos\theta$ มีค่ามากที่สุด = +1 เมื่อเดิน "ทางเดียวกับ" เกรเดียนต์ (θ = 0°) → นั่นคือทิศ <b>ขึ้นเร็วสุด</b> และ $\cos\theta$ น้อยที่สุด = −1 เมื่อเดิน "สวน" เกรเดียนต์ (θ = 180°) → นั่นคือทิศ <b>ลงเร็วสุด</b> = ทิศของ $-\nabla f$ นั่นเอง ไม่มีทิศไหนลงเร็วกว่านี้อีกแล้ว</p>
+<figure class="fig">
+<svg viewBox="0 0 460 260">
+  <ellipse cx="230" cy="125" rx="185" ry="105" fill="none" stroke="#cbd5e1" stroke-width="1.8"/>
+  <ellipse cx="230" cy="125" rx="125" ry="68" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+  <ellipse cx="230" cy="125" rx="62" ry="30" fill="none" stroke="#64748b" stroke-width="1.8"/>
+  <ellipse cx="230" cy="125" rx="10" ry="5" fill="#16a34a"/>
+  <text x="230" y="118" text-anchor="middle" font-size="10" fill="#15803d" font-weight="bold">ต่ำสุด</text>
+  <circle cx="352" cy="76" r="5.5" fill="#f59e0b"/>
+  <line x1="352" y1="76" x2="396" y2="52" stroke="#dc2626" stroke-width="2.5" marker-end="url(#aR)"/>
+  <line x1="352" y1="76" x2="300" y2="103" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="398" y="46" font-size="11.5" fill="#b91c1c" font-weight="bold">∇f (ขึ้นชันสุด)</text>
+  <text x="248" y="122" font-size="11.5" fill="#15803d" font-weight="bold">−∇f (ลงชันสุด)</text>
+  <text x="352" y="98" text-anchor="middle" font-size="10.5" fill="#b45309">จุด P</text>
+  <text x="120" y="242" font-size="11.5" fill="#475569">เส้นโค้ง = contour lines (จุดที่ f เท่ากัน) — เกรเดียนต์ "ตั้งฉาก" กับเส้นชั้นเสมอ</text>
+  <text x="230" y="256" text-anchor="middle" font-size="11.5" fill="#475569">เดินสวนเกรเดียนต์ (มุม 180°) จึงได้ cos θ = −1 = ลงชันเร็วที่สุด</text>
+</svg>
+<figcaption>ภาพที่ 4.2 — บนแผนที่เส้นชั้น: ∇f ตั้งฉากกับเส้นชั้นและชี้ออกนอก (ขึ้น) — −∇f จึงชี้เข้าหาก้นชาม (ลง) ตรงที่สุด</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.2 — ทดลองเดินทุกทิศแล้วเทียบด้วยตัวเลข</span>
+<b>โจทย์:</b> ณ จุดหนึ่ง $\nabla f = (3, 4)$ — ทิศไหนลงชันแรงสุด? ลองเดิน 4 ทิศเทียบกัน<br>
+<b>ขั้น 0 — ขนาดเกรเดียนต์:</b> $\|\nabla f\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$<br>
+<b>ทิศที่ 1 — ขวา:</b> $u = (1, 0)$ → อัตรา = $3(1) + 4(0) = 3$ (ขึ้น แต่ไม่แรงสุด)<br>
+<b>ทิศที่ 2 — ขึ้น:</b> $u = (0, 1)$ → $3(0) + 4(1) = 4$ (ขึ้นแรงกว่า แต่ยังไม่สุด)<br>
+<b>ทิศที่ 3 — ตามเกรเดียนต์:</b> $u = (0.6, 0.8)$ (= (3,4)/5 ทำให้ยาว 1) → $3(0.6) + 4(0.8) = 1.8 + 3.2 = \mathbf{+5}$ → <b>ขึ้นชันสุด</b> (เท่ากับ ‖∇f‖ พอดี ตามสูตร cos θ = 1)<br>
+<b>ทิศที่ 4 — สวนเกรเดียนต์:</b> $u = (-0.6, -0.8)$ → $3(-0.6) + 4(-0.8) = \mathbf{-5}$ → <b>ลงชันสุด!</b> (ลบเต็มที่ cos θ = −1)<br>
+<b>สรุป:</b> ทิศลงชันแรงสุด = $-\nabla f = (-3, -4)$ (ทิศตรงข้ามเกรเดียนต์เป๊ะ) — และไม่ว่าลองทิศไหน ค่าจะอยู่ระหว่าง −5 ถึง +5 เสมอ เพราะ cos θ อยู่ระหว่าง −1 ถึง 1</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "ทำไมต้องเดินตาม −∇f / justify steepest descent" → ตอบสั้นๆ 3 ประโยค: (1) อัตราการเปลี่ยนแปลงในทิศ u คือ $\nabla f \cdot u = \|\nabla f\|\cos\theta$ (2) cos θ ต่ำสุด = −1 ที่มุม 180° (3) เดินสวนเกรเดียนต์จึงลด f เร็วที่สุด — สังเกตด้วยว่า ∇f "ตั้งฉากกับเส้นชั้น (contour)" เป็นข้อสอบยอดนิยม</div>
+
+<h3 class="sec" id="s43">4.3 กฎการปรับปรุง (Update Rule) และขนาดก้าวจริง</h3>
+<div class="formula">$$x_{new} = x - \eta\, \nabla f(x)$$<span class="note">"จุดใหม่ = จุดเดิม ลบด้วย เอทา × เกรเดียนต์" — สมการเดียวที่ขับเคลื่อนการเทรน AI ทั้งโลก</span></div>
+<table class="tbl"><tr><th style="width:24%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$x_{new}$ ("เอ็กซ์ นิว")</td><td>ตำแหน่งหลังก้าว 1 ครั้ง — จะเอาไปแทน x เดิม แล้วก้าวต่ออีกรอบ</td></tr>
+<tr><td>$\eta$ ("เอทา / อีตา" — ตัวอักษรกรีก eta)</td><td><b>Learning rate — อัตราการเรียนรู้</b>: ตัวเลขบวกเล็กๆ ที่เราตั้งเอง เป็น "พวงมาลัย" คุมขนาดก้าว (เช่น 0.01, 0.1, 0.3)</td></tr>
+<tr><td>เครื่องหมาย − (ลบ)</td><td>หัวใจของสูตร! เดิน "สวน" เกรเดียนต์ เพราะ ∇f ชี้ขึ้นชันแรงสุด การสวนทาง = ลงชันแรงสุด (จากหัวข้อ 4.2)</td></tr>
+<tr><td>$\eta\nabla f(x)$</td><td>"เวกเตอร์ก้าว" — ทั้งทิศ (สวนเกรเดียนต์) และระยะ (ยาวเท่า η × ขนาดเกรเดียนต์) อยู่ในตัวเดียว</td></tr></table>
+<div class="def"><b class="tag">ขนาดก้าวจริง (Actual step length) = $\eta\,\|\nabla f\|$: </b> เวกเตอร์ก้าว $-\eta\nabla f$ มีความยาว $= \eta \times \|\nabla f\|$ — ผลสำคัญ: <b>ใกล้ก้นชาม ∇f เล็กลง → ก้าวเล็กลงเองโดยอัตโนมัติ</b> (เบรกอัตโนมัติในตัว) เพราะยิ่งใกล้ก้น พื้นยิ่งราบ ความชันยิ่งน้อย</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.3 — ก้าวหนึ่งครั้ง คำนวณครบทุกชิ้น (ไม่ข้ามขั้น)</span>
+<b>โจทย์:</b> $f(x, y) = x^2 + 2y^2$ ยืนที่ $(2, 1)$ ใช้ $\eta = 0.1$ — ก้าวหนึ่งครั้งแล้วได้อะไร?<br>
+<b>ขั้น 1 — หาเกรเดียนต์ ณ จุดปัจจุบัน:</b> $\dfrac{\partial f}{\partial x} = 2x = 4$, $\dfrac{\partial f}{\partial y} = 4y = 4$ → $\nabla f(2,1) = (4, 4)$<br>
+<b>ขั้น 2 — คำนวณขนาดเกรเดียนต์:</b> $\|\nabla f\| = \sqrt{4^2 + 4^2} = \sqrt{32} \approx 5.657$<br>
+<b>ขั้น 3 — ขนาดก้าวจริง:</b> $\eta\|\nabla f\| = 0.1 \times 5.657 = 0.566$ หน่วย (เดินเอียงทแยงไปทาง (−4, −4))<br>
+<b>ขั้น 4 — อัปเดตตำแหน่ง:</b> $x_{new} = (2, 1) - 0.1(4, 4) = (2 - 0.4,\ 1 - 0.4) = (1.6,\ 0.6)$<br>
+<b>ขั้น 5 — ตรวจว่าดีขึ้นจริงไหม:</b> ก่อนก้าว $f(2,1) = 4 + 2 = 6$ / หลังก้าว $f(1.6, 0.6) = 2.56 + 0.72 = 3.28$ → <b>ลดจาก 6 → 3.28 ✓</b><br>
+<b>อ่านผล:</b> หนึ่งก้าวลดค่า f ลงเกือบครึ่ง — ทำซ้ำขั้น 1–5 ไปเรื่อยๆ ค่าจะคืบเข้าหา (0, 0) ซึ่งเป็นก้นชาม</div>
+
+<h3 class="sec" id="s44">4.4 การหาอนุพันธ์ 3 วิธี: Analytic, Automatic, Numerical</h3>
+<div class="grid2">
+<div class="mcard"><b>1. Analytic (แอนะลิติก — วิเคราะห์จากกฎ)</b><br>ใช้กฎอนุพันธ์ (กฎกำลัง, กฎลูกโซ่) หาสูตรตรงๆ → <b>เป๊ะ 100%</b> แต่ต้องรู้สูตร f และคำนวณมือเอง</div>
+<div class="mcard"><b>2. Automatic Differentiation — AD (ออโตเมติก — อนุพันธ์อัตโนมัติ)</b><br>ให้โปรแกรม "จดทุกการคำนวณ" ที่ทำกับ x แล้วย้อนใช้กฎลูกโซ่อัตโนมัติ → <b>เป๊ะเท่าเครื่องคิดเลข</b> — นี่คือสิ่งที่ PyTorch/TensorFlow ทำตอนเทรน (backpropagation — แบ็กโพรพาเกชัน: การส่งความผิดพลาดย้อนกลับ)</div>
+<div class="mcard" style="grid-column:1 / -1"><b>3. Numerical — Central Difference (นิวเมริคัล — ผลต่างกลาง)</b><br>ไม่รู้สูตรเลยก็ทำได้! แค่ "แตะ f ซ้าย-ขวา" รอบจุดที่สนใจ แล้วหารระยะ → <b>ค่าประมาณ</b> (เหมาะกับ black-box): $f'(x) \approx \dfrac{f(x+h) - f(x-h)}{2h}$</div>
+</div>
+<div class="formula">$$f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}$$<span class="note">"ค่า f ที่ขวา ลบ ค่า f ที่ซ้าย หารด้วยระยะซ้ายขวารวม" — ความชันของเส้นตัดผ่านสองจุดรอบจุดสนใจ</span></div>
+<table class="tbl"><tr><th style="width:24%">สัญลักษณ์ (อ่านว่า)</th><th>คืออะไร / ภาษาคนทั่วไป</th></tr>
+<tr><td>$h$ ("เอช")</td><td>ขนาดช่วงขยับไปแตะ f (เช่น 0.1) — เล็กพอให้เส้นตัดใกล้เคียงเส้นสัมผัส แต่ไม่เล็กเกินจนค่า f ที่ลบกัน "แทบไม่ต่าง" แล้วเกิดความคลาดเคลื่อนจากการปัดทศนิยม</td></tr>
+<tr><td>$f(x+h)$ / $f(x-h)$</td><td>ค่า f ที่ "แตะจุดขวา" / "แตะจุดซ้าย" รอบจุด x — การใช้ทั้งสองข้าง (กลาง) ทำให้ความคลาดเคลื่อนซ้าย-ขวา "หักล้างกัน"</td></tr>
+<tr><td>Forward difference (ฟอร์เวิร์ด — ผลต่างหน้า)</td><td>เวอร์ชันใช้แค่จุดข้างหน้า: $\frac{f(x+h)-f(x)}{h}$ — ง่ายกว่าแต่คลาดเคลื่อนมากกว่า (เทียบให้ดูในตัวอย่าง)</td></tr></table>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.4 — รันทั้ง 3 วิธีบนโจทย์เดียวกัน แล้วเทียบความเป๊ะ</span>
+<b>โจทย์:</b> $f(x) = x^3$ — หา $f'(2)$ ด้วยทั้ง 3 วิธี (ให้ h = 0.1)<br>
+<b>วิธี 1 — Analytic:</b> กฎกำลัง: $f'(x) = 3x^2$ → $f'(2) = 3(4) = \mathbf{12}$ ← ค่าจริง (ground truth)<br>
+<b>วิธี 2 — Numerical แบบ central difference:</b><br>
+• ขั้น 1: $f(2.1) = 2.1^3 = 9.261$ / $f(1.9) = 1.9^3 = 6.859$<br>
+• ขั้น 2: ผลต่าง $= 9.261 - 6.859 = 2.402$<br>
+• ขั้น 3: หาร $2h = 0.2$ → $2.402 / 0.2 = \mathbf{12.01}$ (คลาดเคลื่อนแค่ 0.01 — ใกล้เคียงมาก!)<br>
+<b>วิธี 3 — Numerical แบบ forward difference (เทียบให้เห็นว่าแย่กว่า):</b><br>
+• $(f(2.1) - f(2))/0.1 = (9.261 - 8)/0.1 = 1.261/0.1 = \mathbf{12.61}$ (คลาดเคลื่อน 0.61 — <b>แย่กว่าถึง 61 เท่า!</b> เพราะไม่มีการหักล้างซ้าย-ขวา)<br>
+<b>โบนัส — AD ทำงานอย่างไร:</b> ให้ $f(x) = x(x+1)$ ที่ x = 3: โปรแกรมจดว่า "a = x+1 = 4 แล้ว f = x·a = 12" ตอนย้อนกลับ: $\partial f/\partial a = x = 3$ และ $\partial a/\partial x = 1$ → $f' = 3 \times 1 + 4 \times 1 = 7$ — เทียบสูตรตรง: $f = x^2+x \Rightarrow f' = 2x+1 = 7$ ✓ <b>เป๊ะไม่มีคลาดเคลื่อน</b></div>
+<table class="tbl"><tr><th>วิธี</th><th>เป๊ะไหม</th><th>ต้องรู้สูตร f ไหม</th><th>ใช้เมื่อไหร่</th></tr>
+<tr><td>Analytic</td><td>เป๊ะ 100%</td><td>ต้องรู้ + คำนวณมือ</td><td>ฟังก์ชันเล็ก สูตรชัดเจน</td></tr>
+<tr><td>Automatic (AD)</td><td>เป๊ะ (ระดับเครื่อง)</td><td>ไม่ต้องคำนวณมือ แต่ต้องเขียนโค้ดผ่านไลบรารี AD</td><td>Deep Learning / โมเดลใหญ่ (PyTorch, TensorFlow)</td></tr>
+<tr><td>Numerical (central)</td><td>ประมาณ (คลาดเคลื่อนตาม h)</td><td>ไม่ต้องรู้เลย — แค่เรียก f ได้</td><td>Black-box! เช่น ตรวจโค้ด หรือเรียก simulation ภายนอก</td></tr></table>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> (1) Numerical <b>ใช้กับ black-box ได้</b> แต่ AD/Analytic ใช้ไม่ได้ถ้าไม่มีสูตร — อย่าตอบสลับ! (2) อนุพันธ์เชิงตัวเลขต้องเรียก f <b>2 ครั้ง</b> (ซ้าย+ขวา) ต่อ 1 อนุพันธ์ — แพงกว่า Analytic ที่คำนวณสูตรรวดเดียว (3) ระวังสับสน central (ซ้าย+ขวา หาร 2h) กับ forward (หน้าอย่างเดียว หาร h)</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> โจทย์ให้ f, จุด x และ h → เทมเพลตตอบ: แทนค่า $f(x+h)$ และ $f(x-h)$ → ลบกัน → หาร $2h$ → เทียบกับค่าจริงจากสูตร — อย่าลืมว่าตัวหารคือ <b>2h</b> (จุดตายของนักศึกษาทั้งห้องคือลืม "2")</div>
+
+<h3 class="sec" id="s45">4.5 ผลของอัตราการเรียนรู้ (Learning Rate η): เล็กเกิน / พอดี / ลู่ออก</h3>
+<p><b>สัญชาตญาณ:</b> η คือ "พวงมาลัย+คันเร่ง" — หมุนเบาไป รถครวญคืบไปถึงปลายทางช้ามาก หมุนพอดี ไหลลื่นลงจอด หมุนแรงไป รถส่ายหางกระเด็นออกนอกถนน</p>
+<figure class="fig">
+<svg viewBox="0 0 720 240">
+  <text x="120" y="22" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">η เล็กเกิน (คืบช้า)</text>
+  <path d="M 10 20.4 Q 100 279.6 190 20.4" fill="none" stroke="#2563eb" stroke-width="2.5" transform="translate(20,0)"/>
+  <g fill="#f59e0b"><circle cx="165" cy="117.6" r="4.5"/><circle cx="160.5" cy="123.8" r="4.5"/><circle cx="156.5" cy="128.7" r="4.5"/><circle cx="152.8" cy="132.7" r="4.5"/><circle cx="149.8" cy="135.6" r="4.5"/></g>
+  <line x1="175" y1="112" x2="152" y2="136" stroke="#b45309" stroke-width="2" marker-end="url(#aO)"/>
+  <text x="120" y="212" text-anchor="middle" font-size="10.5" fill="#64748b">จุดเดินช้ามาก ติดกันแน่น</text>
+  <text x="120" y="228" text-anchor="middle" font-size="10.5" fill="#64748b">สุดท้ายเจอ (ถ้างบเยอะพอ)</text>
+  <text x="360" y="22" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#16a34a">η พอดี (ไหลลื่นถึงก้น)</text>
+  <path d="M 10 20.4 Q 100 279.6 190 20.4" fill="none" stroke="#2563eb" stroke-width="2.5" transform="translate(260,0)"/>
+  <g fill="#16a34a"><circle cx="405" cy="117.6" r="4.5"/><circle cx="378" cy="144.8" r="4.5"/><circle cx="367.2" cy="149.2" r="4.5"/><circle cx="362.9" cy="149.9" r="4.5"/></g>
+  <text x="360" y="212" text-anchor="middle" font-size="10.5" fill="#64748b">ก้าวใหญ่ไล่ลำดับ ลดเร็ว</text>
+  <text x="360" y="228" text-anchor="middle" font-size="10.5" fill="#64748b">แล้วเบรกเองใกล้ก้นชาม</text>
+  <text x="600" y="22" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b91c1c">η ใหญ่เกิน (เด้งลู่ออก!)</text>
+  <path d="M 10 20.4 Q 100 279.6 190 20.4" fill="none" stroke="#2563eb" stroke-width="2.5" transform="translate(500,0)"/>
+  <g fill="#dc2626"><circle cx="665" cy="117.6" r="4.5"/><circle cx="566" cy="103.3" r="4.5"/><circle cx="684.8" cy="82.8" r="4.5"/><circle cx="542.3" cy="53.2" r="4.5"/></g>
+  <path d="M 665 113 C 640 100 600 95 570 100 C 620 80 665 72 682 78 C 660 60 610 48 545 50" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="600" y="212" text-anchor="middle" font-size="10.5" fill="#64748b">ก้าวข้ามก้นไปฟากตรงข้าม</text>
+  <text x="600" y="228" text-anchor="middle" font-size="10.5" fill="#64748b">แล้วเด้งแรงขึ้นเรื่อยๆ หนีไป!</text>
+</svg>
+<figcaption>ภาพที่ 4.3 — สามกรณีของ η บนชามเดียวกัน: เล็กเกิน (คืบ) / พอดี (ไหลลื่นถึงก้น) / ใหญ่เกิน (กระเด็นหนี)</figcaption></figure>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.5 — เดินจริง 3 รอบด้วย η ต่างกัน (ฟังก์ชันเดียว จุดเริ่มเดียว)</span>
+<b>โจทย์:</b> $f(x) = x^2$ (ชันคือ $f'(x) = 2x$) เริ่มที่ $x_0 = 3$ — กฎ: $x_{new} = x - \eta(2x) = (1 - 2\eta)\,x$ ← สังเกตว่าทุกก้าวคือ "คูณด้วยค่าคงที่ (1 − 2η)"<br>
+<b>กรณี η = 0.05 (เล็กเกิน):</b> คูณด้วย $1 - 0.1 = 0.9$ ทุกก้าว<br>
+• $x_1 = 0.9(3) = 2.7$ → $x_2 = 0.9(2.7) = 2.43$ → $x_3 = 2.187$ → … (ลดแค่ 10% ต่อก้าว — ต้องใช้หลายสิบก้าวกว่าจะใกล้ 0 → <b>ช้าเกิน</b>)<br>
+<b>กรณี η = 0.3 (พอดี):</b> คูณด้วย $1 - 0.6 = 0.4$ ทุกก้าว<br>
+• $x_1 = 0.4(3) = 1.2$ → $x_2 = 0.48$ → $x_3 = 0.192$ → <b>เข้าเป้าเร็วมาก ✓</b> (ลด 60% ต่อก้าว)<br>
+<b>กรณี η = 1.1 (ใหญ่เกิน):</b> คูณด้วย $1 - 2.2 = -1.2$ ทุกก้าว<br>
+• $x_1 = -1.2(3) = -3.6$ (กระเด็นข้ามก้นไปฟากซ้าย!) → $x_2 = -1.2(-3.6) = 4.32$ (เด้งกลับขวา <b>ไกลกว่าเดิม!</b>) → $x_3 = -5.184$ → … <b>ขนาดโตขึ้นเรื่อยๆ = ลู่ออก (diverge) ✗</b><br>
+<b>สรุปสวยงาม:</b> พฤติกรรมทั้งหมดคุมด้วยตัวคูณ $(1 - 2\eta)$: อยู่ระหว่าง −1 ถึง 1 → หด, เท่ากับ −1 → เด้งสวิงไม่จบ, นอกช่วง → บานปลาย (และมันนำไปสู่สูตรขอบเขตในหัวข้อถัดไปพอดี!)</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> โจทย์ให้เส้นทาง x₁, x₂, x₃… แล้วถามว่า η เป็นอย่างไร → เช็คสองอย่าง: <b>(1) ขนาดลดลงต่อเนื่อง = กำลังลู่เข้า (2) ขนาดโตขึ้น/สลับข้างแล้วโต = ลู่ออก → η ใหญ่เกิน</b> — ถ้าโจทย์ถาม "สัญญาณบอกว่า η ใหญ่เกินไหม" → ตอบ: ค่า f สลับข้าง (ซ้าย-ขวาของก้น) และ |x| โตขึ้นทุกก้าว</div>
+
+<h3 class="sec" id="s46">4.6 ขอบเขตทางทฤษฎีสำหรับฟังก์ชันกำลังสอง: $0 < \eta < 2/\lambda_{max}$</h3>
+<p><b>สัญชาตญาณ:</b> ชามแต่ละใบมี "ความโค้ง" ต่างกัน — ชามแหลมชัน (โค้งแรง) ต้องก้าวเบาๆ ชามกว้างราบ ก้าวใหญ่ได้ — คำถามคือ "ใหญ่ได้สุดกี่" ทฤษฎีให้คำตอบตายตัว: <b>น้อยกว่า 2 หารด้วยความโค้งสูงสุด</b></p>
+<div class="def"><b class="tag">ตัวละครในสูตร:</b><br>
+<b>$\lambda$ ("แลมดา" — lambda):</b> ค่าความโค้งของชาม — ใน 1 มิติ ฟังก์ชันกำลังสองเขียนเป็น $f(x) = \frac{1}{2}\lambda x^2$ ได้เสมอ (เช่น $x^2 = \frac{1}{2}(2)x^2$ → λ = 2)<br>
+<b>$\lambda_{max}$ ("แลมดา แม็กซ์"):</b> ความโค้งสูงสุดในบรรดาทุกทิศ (ในหลายมิติ แต่ละทิศมีความโค้งต่างกัน = eigenvalues — ไอเกนวาลู) — <b>ทิศที่โค้งแรงสุดคือทิศที่ระเบิดก่อน</b> เลยต้องใช้ตัวใหญ่สุดคุมกฎ</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.6a — พิสูจน์ขอบเขตทีละบรรทัด (แต่ละบรรทัดมีเหตุผลกำกับ)</span>
+<b>ตั้งต้น:</b> $f(x) = \frac{1}{2}\lambda x^2$ (ชามมาตรฐาน ความโค้ง λ)<br>
+<b>บรรทัด 1 — หาความชัน:</b> $f'(x) = \lambda x$ <span class="small">(อนุพันธ์ของ ½λx² — ยกเลขชี้กำลังลงคูณ)</span><br>
+<b>บรรทัด 2 — แทนในกฎอัปเดต:</b> $x_{new} = x - \eta(\lambda x) = (1 - \eta\lambda)\,x$ <span class="small">(ดึง x ร่วมประจักษ์ — ได้ว่าทุกก้าวคือ "คูณด้วย (1 − ηλ)")</span><br>
+<b>บรรทัด 3 — เงื่อนไขลู่เข้า:</b> ระยะห่างจากก้นชามถูกคูณด้วย $|1 - \eta\lambda|$ ทุกก้าว → จะลู่เข้าได้ต้องหดลง คือ $|1 - \eta\lambda| < 1$ <span class="small">(คูณด้วยจำนวนที่ |·| < 1 = หด, เท่ากับ 1 = ไม่เคลื่อนจริง, มากกว่า 1 = โต)</span><br>
+<b>บรรทัด 4 — แกะค่าสัมบูรณ์:</b> $-1 < 1 - \eta\lambda < 1$ <span class="small">(นิยามค่าสัมบูรณ์)</span><br>
+<b>บรรทัด 5 — ลบ 1 ทั้งช่วง:</b> $-2 < -\eta\lambda < 0$<br>
+<b>บรรทัด 6 — คูณ −1 (ตัวเครื่องหมายพลิก!):</b> $2 > \eta\lambda > 0$<br>
+<b>บรรทัด 7 — หาร λ (เป็นบวก):</b> $0 < \eta < \dfrac{2}{\lambda}$ □ <span class="small">(จบการพิสูจน์)</span><br>
+<b>ขยายเป็นหลายมิติ:</b> ชามหลายมิติมีความโค้งต่างกันทุกทิศ (λ₁, λ₂, …) — ทุกทิศต้องผ่านเงื่อนไข ดังนั้นทิศที่ "โค้งแรงสุด" (λ ใหญ่สุด = λ_max) คือคนคุมกฎ → $0 < \eta < \dfrac{2}{\lambda_{max}}$</div>
+<div class="ex"><span class="t">🩵 ตัวอย่างจับมือทำ 4.6b — ใช้สูตรจริง: f(x) = x² เดินด้วย 3 ค่า η</span>
+<b>ขั้น 1 — หา λ:</b> $x^2 = \frac{1}{2}(2)x^2$ → $\lambda = 2$ → ขอบเขต $0 < \eta < 2/2 = \mathbf{1}$<br>
+<b>ขั้น 2 — ตัวคูณต่อก้าว = (1 − 2η):</b> แล้วเดินจาก x₀ = 3 ให้ดูจริง:<br>
+<table class="tbl" style="margin-top:6px"><tr><th>η</th><th>ตัวคูณ (1−2η)</th><th>x₁, x₂, x₃, x₄</th><th>สรุป</th></tr>
+<tr><td>0.9 (ในขอบเขต)</td><td>−0.8 (|·| < 1)</td><td>3 → −2.4 → 1.92 → −1.536 (สลับข้างแต่หด)</td><td><b>ลู่เข้า ✓</b> (ส่ายๆ แต่เข้าใกล้)</td></tr>
+<tr><td>1.0 (ขอบพอดี)</td><td>−1 (เป๊ะ)</td><td>3 → −3 → 3 → −3</td><td><b>สวิงไม่จบ ✗</b> (ไม่ลู่เข้า — เพราะนั่นแหละคือ "ขอบ")</td></tr>
+<tr><td>1.1 (เกินขอบ)</td><td>−1.2 (|·| > 1)</td><td>3 → −3.6 → 4.32 → −5.184 (สลับข้างแล้วโต)</td><td><b>ลู่ออก ✗ ระเบิด</b></td></tr></table>
+<b>ขั้น 3 — อ่านผล:</b> ขอบเขต $0 < \eta < 2/\lambda_{max}$ ทำนายตรงเป๊ะทุกกรณี — ในขอบเขต = หด (แม้จะส่ายข้างถ้าตัวคูณติดลบ) / เกินขอบ = บานปลาย / แตะขอบ = สวิงตายตัวไม่จบ</div>
+<div class="warn"><span class="t">⚠️ จุดที่ข้อสอบชอบหลอก</span> (1) ต้องเป็น "<b>เครื่องหมายน้อยกว่าเป๊ะ</b>" — η = 2/λ_max พอดีไม่ลู่เข้า (สวิงไม่จบ) และ η ต้อง <b>บวก</b> (η ≤ 0 = ไต่ขึ้นเขา!) (2) ในหลายมิติต้องใช้ <b>λ_max (โค้งสูงสุด)</b> ไม่ใช่ค่าเฉลี่ยหรือค่าเล็กสุด เพราะทิศที่โค้งแรงสุดระเบิดก่อนเสมอ (3) อย่าลืม "2" — สูตรคือ 2/λ ไม่ใช่ 1/λ</div>
+<div class="tip"><span class="t">💡 เทคนิคตีโจทย์</span> เจอ "f(x) = ½λx² หรือ x² จงหาช่วงของ η ที่รับประกันการลู่เข้า" → เทมเพลตตอบ 3 บรรทัด: (1) ดึง λ จาก f (เช่น x² → λ = 2) (2) เขียนเงื่อนไข $|1 - \eta\lambda| < 1$ (3) แกะได้ $0 < \eta < 2/\lambda$ — และถ้าโจทย์ให้ค่า λ_max มาตรงๆ ก็แทนเลขได้เลย เช่น λ_max = 4 → ตอบ 0 < η < 0.5</div>
+</section>
+
+<!-- ================= APPENDIX ================= -->
+<section class="card chapter" id="cheat">
+<h2 class="chap"><span class="chapnum">🎯</span>ภาคผนวก: สรุปสูตรทั้งหมด + เช็คลิสต์ก่อนเข้าห้องสอบ</h2>
+<h3 class="sec" style="margin-top:10px">A. สูตรสำคัญรวมศูนย์ (อ่านซ้ำวันสอบ)</h3>
+<table class="tbl"><tr><th style="width:38%">สูตร</th><th>แปลว่า / ใช้เมื่อไหร่</th></tr>
+<tr><td>$\min_{x \in S} f(x)$ และ $y = f(x)$</td><td>โครงปัญหา optimization: หา x ให้ f ต่ำสุด — 3 องค์ประกอบ: x (คำตอบที่เสนอ), f (เครื่องชิม), y (คะแนนที่วัดได้)</td></tr>
+<tr><td>Curse of dimensionality: จุดสำรวจโต $10^n$</td><td>มิติเพิ่ม 1 → งบโต ×10 เสมอ (exponential)</td></tr>
+<tr><td>เซตคอนเวกซ์: $\theta x_1 + (1-\theta)x_2 \in C$</td><td>ลากเส้นสองจุดในเซต เส้นอยู่ในเซตทั้งเส้น</td></tr>
+<tr><td>ฟังก์ชันคอนเวกซ์ (chord test): $f(\text{ผสม}) \le \text{ผสมของ} f$</td><td>คอร์ดลอยเหนือกราฟเสมอ — ทิศ ≤ = convex, ≥ = concave</td></tr>
+<tr><td>$\text{epi}\, f = \{(x,t) : f(x) \le t\}$</td><td>ภูมิภาคเหนือกราฟ — f คอนเวกซ์ ⟺ epi f เป็นเซตคอนเวกซ์</td></tr>
+<tr><td>อันดับ 1: $f(x_2) \ge f(x_1) + \nabla f(x_1)^\top(x_2-x_1)$</td><td>ระนาบสัมผัสวางใต้กราฟเสมอ</td></tr>
+<tr><td>อันดับ 2: $\nabla^2 f \succeq 0$ ทุกจุด</td><td>เฮสเซียนกึ่งบวกแน่นอน = โค้งขึ้นทุกทิศ (eigenvalues ≥ 0 ทุกตัว)</td></tr>
+<tr><td>3 เงื่อนไขปัญหาคอนเวกซ์: $f_0$ คอนเวกซ์ / $f_i \le 0$ คอนเวกซ์ / $h_j$ แอฟฟินเท่านั้น</td><td>เช็คทีละข้อ — สมการที่ไม่แอฟฟิน = ตกรอบทันที</td></tr>
+<tr><td>คอนเวกซ์ → Local = Global</td><td>เจอหลุมแถวนั้น = เจอหลุมลึกสุดประเทศ</td></tr>
+<tr><td>ไม่มีข้อจำกัด: $\nabla f(x^*) = 0$</td><td>จุดราบ — ใช้ได้เฉพาะไม่มีข้อจำกัด (มีกำแพง = ติดกำแพงแล้ว ∇f ≠ 0 ได้)</td></tr>
+<tr><td>Random restarts: โอกาสซวยทั้งหมด $= p^R$</td><td>เริ่มใหม่ R รอบอิสระ → โอกาสตายทั้งชุดลดแบบยกกำลัง</td></tr>
+<tr><td>Acceptance rate = รับ ÷ เสนอ, โซนดี = 20–50%</td><td>> 50% ก้าวเล็กเกิน (เพิ่ม step) / < 20% ก้าวใหญ่เกิน (ลด step)</td></tr>
+<tr><td>ทดลองที่แฟร์: ≥ 30 รันอิสระ, budget เท่ากัน, 2 ยอด → รายงาน success rate</td><td>mean หลอกเมื่อการแจกแจงเป็น bimodal</td></tr>
+<tr><td>$\text{อัตราเปลี่ยนทิศ } u = \nabla f \cdot u = \|\nabla f\|\cos\theta$</td><td>cos θ = −1 ที่ 180° → $-\nabla f$ = ทิศลงชันสุด (steepest descent) และ ∇f ตั้งฉากกับ contour</td></tr>
+<tr><td>$x_{new} = x - \eta\nabla f(x)$, ขนาดก้าวจริง $= \eta\|\nabla f\|$</td><td>กฎอัปเดต Gradient Descent — ใกล้ก้นชามก้าวเล็กลงเอง</td></tr>
+<tr><td>Central difference: $f'(x) \approx \frac{f(x+h)-f(x-h)}{2h}$</td><td>อนุพันธ์แบบตัวเลข (ใช้กับ black-box ได้) — ตัวหารคือ 2h!</td></tr>
+<tr><td>$0 < \eta < 2/\lambda_{max}$</td><td>ขอบเขต η ที่รับประกันลู่เข้าบนฟังก์ชันกำลังสอง (λ_max = ความโค้งสูงสุด)</td></tr></table>
+
+<h3 class="sec">B. เช็คลิสต์ 12 ข้อก่อนเข้าห้องสอบ</h3>
+<ol class="tight">
+<li>✅ องค์ประกอบ 3 อย่าง = <b>X–F–Y: คำตอบที่เสนอ → เครื่องชิม → คะแนนที่วัดได้</b> (อย่าสลับ y กับ x!)</li>
+<li>✅ Search space = แผนที่ตำแหน่ง / Response surface = แผนที่ + ความสูง f — สองคำนี้ต่างกัน</li>
+<li>✅ Curse of dimensionality = จุดสำรวจโต <b>exponential</b> ($10^n$) ตามจำนวนมิติ</li>
+<li>✅ เทียบอัลกอริทึมด้วย <b>function evaluations</b> (จำนวนครั้งเรียก f) ไม่ใช่วินาที</li>
+<li>✅ Black-box (ไม่มีสูตร/อนุพันธ์) → ใช้วิธีสุ่ม — <b>ห้าม</b>ตอบ Gradient Descent</li>
+<li>✅ Chord test: $f(\text{ผสม}) \le \text{ผสมของ} f$ = convex / พลิกเป็น ≥ = concave</li>
+<li>✅ เฮสเซียน ⪰ 0 (eigenvalues ≥ 0 <b>ทุกจุด</b>) = คอนเวกซ์ — จุดเดียวไม่พอ!</li>
+<li>✅ ข้อจำกัดสมการต้องแอฟฟินเท่านั้น / อสมการ ≥ ต้องคูณ −1 ก่อนตรวจ</li>
+<li>✅ Hill climbing รับเฉพาะดีขึ้น → ติด local เสมอ → แก้ด้วย Restarts (ภูมิประเทศสุ่ม) หรือ ILS (Big Valley)</li>
+<li>✅ Acceptance rate 20–50% = พอดี / > 50% เพิ่ม step / < 20% ลด step</li>
+<li>✅ $-\nabla f$ = ทิศลงชันสุด (เพราะ $\cos\theta$ ต่ำสุด −1 ที่มุม 180°) — ∇f ตั้งฉากกับ contour เสมอ</li>
+<li>✅ $x_{new} = x - \eta\nabla f$ / ก้าวจริง $= \eta\|\nabla f\|$ / ขอบเขต $0 < \eta < 2/\lambda_{max}$ (η = ขอบพอดี → สวิงไม่จบ, เกิน → ระเบิด)</li>
+</ol>
+<div class="key"><b class="tag">คำพูดปิดท้าย:</b> ข้อสอบวิชานี้ไม่ได้ทดสอบการจำ — มันทดสอบว่าคุณ "อ่านสัญลักษณ์ออก และเล่าเรื่องกลับได้" ทุกสูตรในเล่มนี้มีเรื่องเล่า (ชามซุป, หมอกหนา, พวงมาลัย) — ถ้าจำเรื่องเล่าได้ สูตรจะตามมาเอง สู้ๆ!</div>
+</section>
+
+</main>
+</div>
+
+<footer class="end">DSI207 · คู่มือเตรียมสอบกลางภาค ฉบับเจาะลึกจากศูนย์ · จัดทำเพื่อการทบทวนเนื้อหา</footer>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+</body>
+</html>
